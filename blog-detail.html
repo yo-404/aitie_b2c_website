@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Brands for Gen Z: What Matters Now | Aitie Blog</title>
+<meta name="description" content="Discover how modern brands and creators build authentic Gen Z connections, drive community loyalty, and scale effectively in an AI-first era." />
+<meta property="og:title" content="Building Brands for Gen Z: What Matters Now | Aitie Blog" />
+<meta property="og:description" content="Discover how modern brands and creators build authentic Gen Z connections, drive community loyalty, and scale effectively in an AI-first era." />
+<meta property="og:image" content="images/og-image/blog-meta.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=42dot+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link
+  href="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/css/az-lifelogx.webflow.shared.0ad6c3188.css"
+  rel="stylesheet"
+  type="text/css"
+  integrity="sha384-CtbDGI87PEaky2ahnZofkLPE4c2n+KA41KzEfavpBVai5JldiPICwr607fU30DPW"
+  crossorigin="anonymous" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<style>
+  :root {
+    --color-1: #EDEAFB;
+    --color-2: #b9adf6;
+    --color-accent: #545784;
+    --color-accent-dark: #33355a;
+    --color-card-active: #46486e;
+    --color-ink: #1a1a2e;
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-1);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: clip;
+  }
+  body {
+    font-family: var(--font-family);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: clip;
+    background-color: var(--color-1);
+    position: relative;
+  }
+
+  .post-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: clip;
+    background:
+      radial-gradient(120% 60% at 85% 0%, rgba(255,255,255,.55), transparent 55%),
+      linear-gradient(160deg, var(--color-1), var(--color-2) 85%);
+  }
+
+  /* Ambient Glow Blobs */
+  .post-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(85px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .post-blob.b1 { width: 32rem; height: 32rem; background: #fff; top: 0; right: -8rem; opacity: .75; }
+  .post-blob.b2 { width: 28rem; height: 28rem; background: var(--color-accent); bottom: 15%; left: -8rem; opacity: .16; }
+  .post-blob.b3 { width: 24rem; height: 24rem; background: var(--color-2); top: 35%; right: -6rem; opacity: .35; }
+
+  /* Back Button & Breadcrumbs */
+  .post-header {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 7.5rem 2rem 2rem;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    margin-bottom: 1.8rem;
+    padding: .4rem .9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(84, 87, 132, 0.16);
+    backdrop-filter: blur(10px);
+    transition: all .2s ease;
+  }
+  .back-link:hover {
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--color-ink);
+    transform: translateX(-3px);
+  }
+
+  /* Article Hero */
+  .post-hero-meta-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-bottom: 1.2rem;
+  }
+  .badge-tag {
+    padding: .35rem .85rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    background: rgba(84, 87, 132, 0.14);
+    color: var(--color-accent-dark);
+  }
+  .badge-tag.primary {
+    background: var(--color-card-active);
+    color: #fff;
+  }
+  .post-date-read {
+    font-size: .9rem;
+    color: rgba(26, 26, 46, 0.6);
+    font-weight: 500;
+  }
+
+  .post-title {
+    font-size: clamp(2.2rem, 4.8vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -.025em;
+    color: var(--color-ink);
+    max-width: 54rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .post-lead {
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    line-height: 1.55;
+    color: rgba(26, 26, 46, 0.76);
+    max-width: 48rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Author Row */
+  .post-author-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid rgba(84, 87, 132, 0.15);
+    border-bottom: 1px solid rgba(84, 87, 132, 0.15);
+    margin-bottom: 2.8rem;
+  }
+  .post-author {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+  }
+  .post-author-avatar {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background: #1a1a2e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(26, 26, 46, 0.18);
+  }
+  .post-author-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-ink);
+  }
+  .post-author-role {
+    font-size: .84rem;
+    color: rgba(26, 26, 46, 0.55);
+  }
+
+  .share-buttons {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .45rem .85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(84, 87, 132, 0.18);
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--color-ink);
+    font-size: .84rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all .2s ease;
+  }
+  .share-btn:hover {
+    background: #fff;
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(84, 87, 132, 0.12);
+  }
+
+  /* Featured Image Frame */
+  .post-featured-image-holder {
+    position: relative;
+    width: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+    border: 1px solid rgba(84, 87, 132, 0.18);
+    box-shadow: 0 24px 60px rgba(84, 87, 132, 0.12);
+    background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+  }
+  .post-featured-image {
+    width: 100%;
+    height: auto;
+    max-height: 32rem;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Main Article Layout: Content + Sticky Sidebar */
+  .post-body-container {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 22rem;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  /* Article Content Styles */
+  .article-content {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(84, 87, 132, 0.15);
+    border-radius: 28px;
+    padding: 3rem;
+    box-shadow: 0 16px 44px rgba(84, 87, 132, 0.08);
+  }
+
+  .article-content h2 {
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.25;
+    color: var(--color-ink);
+    margin-top: 2.8rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid rgba(84, 87, 132, 0.12);
+  }
+  .article-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .article-content h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -.015em;
+    line-height: 1.35;
+    color: var(--color-ink);
+    margin-top: 2rem;
+    margin-bottom: .8rem;
+  }
+
+  .article-content p {
+    font-size: 1.1rem;
+    line-height: 1.78;
+    color: rgba(26, 26, 46, 0.84);
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content strong {
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+
+  /* Stat Callout Box */
+  .stat-callout {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(84, 87, 132, .08);
+    border: 1px solid rgba(84, 87, 132, 0.18);
+    border-radius: 18px;
+    padding: 1.6rem 2rem;
+    margin: 2.2rem 0;
+    backdrop-filter: blur(10px);
+  }
+  .stat-number {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #3b3c5e;
+    letter-spacing: -.03em;
+  }
+  .stat-desc {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--color-ink);
+    margin: 0 !important;
+  }
+
+  /* Ordered & Unordered Lists */
+  .article-content ol,
+  .article-content ul {
+    margin: 1.4rem 0 2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+  }
+  .article-content li {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: rgba(26, 26, 46, 0.84);
+  }
+  .article-content li strong {
+    color: var(--color-ink);
+  }
+
+  /* Comparison Box: Brand A vs Brand B */
+  .case-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2.2rem 0;
+  }
+  .comparison-card {
+    padding: 1.6rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(84, 87, 132, 0.18);
+  }
+  .comparison-card.bad {
+    border-top: 4px solid #545784;
+  }
+  .comparison-card.good {
+    border-top: 4px solid #3b3c5e;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(237, 234, 251, 0.6));
+    box-shadow: 0 10px 28px rgba(84, 87, 132, 0.08);
+  }
+  .comparison-label {
+    font-size: .85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: .6rem;
+    color: #3b3c5e;
+  }
+  .comparison-card.bad .comparison-label { color: #545784; }
+  .comparison-card.good .comparison-label { color: #3b3c5e; }
+  .comparison-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-ink);
+    margin-bottom: .6rem;
+  }
+  .comparison-text {
+    font-size: .95rem !important;
+    line-height: 1.55 !important;
+    color: rgba(26, 26, 46, 0.72) !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Takeaways Card */
+  .takeaways-box {
+    background: var(--color-card-active);
+    color: #fff;
+    border-radius: 24px;
+    padding: 2.2rem;
+    margin-top: 2.8rem;
+    box-shadow: 0 16px 40px rgba(70, 72, 110, 0.28);
+  }
+  .takeaways-box h3 {
+    font-size: 1.35rem;
+    color: #fff !important;
+    margin-top: 0;
+    margin-bottom: .8rem;
+  }
+  .takeaways-box p {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+  }
+
+  /* Sticky Sidebar */
+  .post-sidebar {
+    position: sticky;
+    top: 5.5rem;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  .sidebar-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(84, 87, 132, 0.16);
+    border-radius: 24px;
+    padding: 1.6rem;
+    box-shadow: 0 12px 32px rgba(84, 87, 132, 0.07);
+  }
+  .sidebar-card-title {
+    font-size: .95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--color-accent-dark);
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid rgba(84, 87, 132, 0.12);
+  }
+
+  /* Table of Contents */
+  .toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+  .toc-link {
+    font-size: .86rem;
+    font-weight: 500;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    padding: .5rem .6rem;
+    border-radius: .7rem;
+    line-height: 1.4;
+    transition: background .2s ease, color .2s ease;
+    display: block;
+  }
+  .toc-link:hover {
+    background: rgba(84, 87, 132, .1);
+    color: var(--color-ink);
+  }
+  .toc-link.is-active,
+  .toc-link.active {
+    background: var(--color-accent-dark);
+    color: #fff !important;
+    font-weight: 600;
+  }
+
+  /* Author Sidebar Card */
+  .author-sidebar-info {
+    display: flex;
+    gap: .85rem;
+    align-items: center;
+    margin-bottom: .8rem;
+  }
+  .author-sidebar-desc {
+    font-size: .88rem;
+    line-height: 1.5;
+    color: rgba(26, 26, 46, 0.68);
+  }
+
+  /* Related Articles Section */
+  .related-section {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 3rem auto 6rem;
+    padding: 0 2rem;
+  }
+  .related-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .related-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--color-ink);
+    letter-spacing: -.02em;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+  }
+
+  .related-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(84, 87, 132, 0.14);
+    border-radius: 22px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(84, 87, 132, 0.12);
+    border-color: rgba(84, 87, 132, 0.28);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .related-card-img-wrap {
+    width: 100%;
+    height: 11rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+  }
+  .related-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+  }
+  .related-card:hover .related-card-img {
+    transform: scale(1.05);
+  }
+  .related-card-body {
+    padding: 1.3rem;
+  }
+  .related-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-ink);
+    margin-bottom: .5rem;
+    transition: color .2s ease;
+  }
+  .related-card:hover .related-card-title {
+    color: #3b3c5e;
+  }
+
+  /* ---------- mobile floating navigation button & drawer ---------- */
+  .blog-mobile-fab, .blog-mobile-drawer, .blog-mobile-backdrop {
+    display: none;
+  }
+
+  /* Responsive Rules */
+  @media screen and (max-width: 991px) {
+    .post-body-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .post-sidebar {
+      position: static;
+    }
+    .sidebar-card.desktop-toc {
+      display: none !important;
+    }
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mobile Floating Action Button */
+    .blog-mobile-fab {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.2rem;
+      z-index: 120;
+      padding: .75rem 1.25rem;
+      border-radius: 2rem;
+      background: var(--color-card-active);
+      color: #fff;
+      font-family: var(--font-family);
+      font-size: .88rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 12px 28px rgba(26,26,46,.3);
+      cursor: pointer;
+      transition: transform .2s ease, background .25s ease, box-shadow .25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .blog-mobile-fab:active {
+      transform: scale(.95);
+    }
+    .blog-mobile-fab .fab-icon-close { display: none; }
+    .blog-mobile-fab.is-open {
+      background: #1a1a2e;
+    }
+    .blog-mobile-fab.is-open .fab-icon-menu { display: none; }
+    .blog-mobile-fab.is-open .fab-icon-close { display: block; }
+
+    /* Mobile Backdrop */
+    .blog-mobile-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,26,46,.35);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 105;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .blog-mobile-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Mobile Floating Drawer */
+    .blog-mobile-drawer {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      position: fixed;
+      bottom: 4.8rem;
+      right: 1.2rem;
+      width: clamp(16rem, 84vw, 20rem);
+      max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+      padding: 1.2rem 1rem;
+      border-radius: 1.4rem;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(84,87,132,.22);
+      box-shadow: 0 20px 45px rgba(26,26,46,.25);
+      z-index: 110;
+      opacity: 0;
+      transform: translateY(14px) scale(.95);
+      pointer-events: none;
+      transition: opacity .3s cubic-bezier(.16,1,.3,1), transform .3s cubic-bezier(.16,1,.3,1);
+    }
+    .blog-mobile-drawer.is-open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+    .blog-mobile-drawer-title {
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: rgba(26,26,46,.45);
+      margin-bottom: .4rem;
+      padding: 0 .6rem;
+    }
+    .blog-mobile-drawer a {
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--color-accent-dark);
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: .8rem;
+      transition: background .2s ease, color .2s ease;
+    }
+    .blog-mobile-drawer a:hover {
+      background: rgba(84,87,132,.12);
+    }
+    .blog-mobile-drawer a.is-active,
+    .blog-mobile-drawer a.active {
+      background: var(--color-accent-dark);
+      color: #fff;
+      font-weight: 600;
+    }
+    .blog-mobile-drawer::-webkit-scrollbar { width: 4px; }
+    .blog-mobile-drawer::-webkit-scrollbar-thumb { background: rgba(84,87,132,.25); border-radius: 4px; }
+  }
+
+  @media screen and (max-width: 767px) {
+    .post-header {
+      padding: 6.5rem 1.25rem 1.5rem;
+    }
+    .post-body-container {
+      padding: 0 1.25rem 3rem;
+    }
+    .article-content {
+      padding: 1.8rem 1.25rem;
+      border-radius: 20px;
+    }
+    .stat-callout {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: 1.25rem;
+    }
+    .case-comparison-grid {
+      grid-template-columns: 1fr;
+    }
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+    .related-section {
+      padding: 0 1.25rem;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="post-page">
+  <div class="post-blob b1"></div>
+  <div class="post-blob b2"></div>
+  <div class="post-blob b3"></div>
+
+  <!-- Global Portable Navbar -->
+  <div id="global-navbar-mount"></div>
+
+  <!-- Article Header -->
+  <header class="post-header">
+    <a href="blogs.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      <span>Back to all articles</span>
+    </a>
+
+    <div class="post-hero-meta-row">
+      <span class="badge-tag primary">Brand Strategy</span>
+      <span class="badge-tag">Gen Z Culture</span>
+      <span class="post-date-read">October 3, 2026 &bull; 6 min read</span>
+    </div>
+
+    <h1 class="post-title">Building Brands for Gen Z — What Matters Now</h1>
+    <p class="post-lead">
+      Gen Z buys into brands, not just products. How modern businesses can transition from polished sales pitches to authentic connection engines that scale.
+    </p>
+
+    <!-- Author & Social Sharing -->
+    <div class="post-author-row">
+      <div class="post-author">
+        <div class="post-author-avatar">A</div>
+        <div>
+          <div class="post-author-name">Aitie Editorial Team</div>
+          <div class="post-author-role">Strategy &amp; Cultural Research</div>
+        </div>
+      </div>
+      <div class="share-buttons">
+        <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span>Copy link</span>
+        </button>
+        <a href="https://twitter.com/intent/tweet?text=Building%20Brands%20for%20Gen%20Z" target="_blank" rel="noopener" class="share-btn">
+          <span>X / Twitter</span>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" class="share-btn">
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Cover Image -->
+    <div class="post-featured-image-holder">
+      <img src="https://cdn.prod.website-files.com/682ec74316c172472c7ac58d/68ded110472e14b34fae491e_ere.png" alt="Building Brands for Gen Z Hero Cover" class="post-featured-image">
+    </div>
+  </header>
+
+  <!-- Article Layout -->
+  <div class="post-body-container">
+    <!-- Main Article Body -->
+    <article class="article-content">
+      <section id="introduction">
+        <p>
+          Gen Z is the first generation that has grown up entirely online. They swipe before they type, spend more time on TikTok and YouTube than traditional TV, and see through advertising faster than any demographic before them.
+        </p>
+        
+        <div class="stat-callout">
+          <div class="stat-number">30%</div>
+          <p class="stat-desc">
+            By 2030, Gen Z is projected to represent nearly 30% of the global workforce and consumer purchasing power.
+          </p>
+        </div>
+
+        <p>
+          For forward-thinking brands, this isn’t a distant shift — it’s already here. If you want your business to stay relevant, build credibility, and generate compounding growth, you need to understand how Gen Z thinks and what compels them to choose one brand over another.
+        </p>
+      </section>
+
+      <section id="gen-z-lens">
+        <h2>The Gen Z Lens</h2>
+        <p>
+          Unlike older generations, Gen Z is deeply skeptical of polished campaigns and corporate speak. They value honesty, relevance, and speed. They are far more likely to discover products through authentic creator stories than through broadcast commercials, and they insist that brands <strong>stand for something meaningful</strong>.
+        </p>
+        <p>Here are the fundamental pillars that matter to them:</p>
+
+        <h3>1. Authenticity Over Perfection</h3>
+        <p>
+          A glossy, over-produced ad no longer impresses Gen Z — it makes them suspicious. They gravitate toward the raw side of brands: behind-the-scenes building, real people, transparent failures, and voices that sound authentic rather than scripted.
+        </p>
+
+        <h3>2. Values Over Features</h3>
+        <p>
+          According to comprehensive consumer research from Deloitte, <strong>77% of Gen Z consumers say they buy from brands that align with their core values.</strong> Sustainability, inclusivity, creator empowerment, and ethical transparency aren't optional nice-to-haves — they are baseline expectations.
+        </p>
+
+        <h3>3. Community Over Customers</h3>
+        <p>
+          Gen Z doesn’t just want to passively consume. They want to belong. Brands that build interactive micro-communities — through private Discord servers, niche channels, or collaborative digital drops — win lifelong loyalty far beyond a single transaction.
+        </p>
+
+        <h3>4. Personalization at Scale</h3>
+        <p>
+          Having grown up alongside algorithmic recommendation feeds, Gen Z expects content and product discovery to feel tailor-made. A generic email blast falls flat; a hyper-personalized, contextual experience converts.
+        </p>
+
+        <h3>5. Short Attention, Long Stories</h3>
+        <p>
+          Yes, Gen Z scrolls at lightning speed. But the stories they care about stick deep. A brand that consistently tells a coherent, meaningful narrative will outlast competitors chasing fleeting viral trends.
+        </p>
+      </section>
+
+      <section id="brand-challenge">
+        <h2>The Challenge for Brands</h2>
+        <p>
+          Older marketing playbooks are rapidly depreciating. Gen Z ignores slogans, rejects lengthy sales pitches, and abandons brands that lack cultural resonance.
+        </p>
+        <p>
+          This creates a massive opportunity for modern builders. Brands that adapt their systems now will lock in mindshare and customer loyalty for the next several decades.
+        </p>
+      </section>
+
+      <section id="how-to-build">
+        <h2>How to Build for Gen Z: A 5-Point Playbook</h2>
+        <ol>
+          <li>
+            <strong>Start With Story:</strong> Define your purpose beyond pure profit. Why does your product exist, and what role does it play in the culture of your users?
+          </li>
+          <li>
+            <strong>Use Their Platforms:</strong> Communicate natively where your audience spends their attention — TikTok, Instagram Reels, YouTube Shorts, and specialized community hubs.
+          </li>
+          <li>
+            <strong>Partner With Voices They Trust:</strong> Collaborate with micro-creators and real practitioners whose organic audience already values their recommendations.
+          </li>
+          <li>
+            <strong>Keep It Interactive:</strong> Polls, live co-creation, AR filters, and gamified reward drops engage infinitely more than static one-way announcements.
+          </li>
+          <li>
+            <strong>Stay Real:</strong> Admit mistakes quickly, document the messy building process, and resist the temptation to over-polish.
+          </li>
+        </ol>
+      </section>
+
+      <section id="case-study">
+        <h2>Case in Point: A Tale of Two Brands</h2>
+        <p>Consider two modern consumer companies launching in the same market:</p>
+        
+        <div class="case-comparison-grid">
+          <div class="comparison-card bad">
+            <div class="comparison-label">Brand A &bull; Legacy Approach</div>
+            <div class="comparison-title">Glossy &amp; Staged</div>
+            <p class="comparison-text">
+              Relies on expensive studio sets, scripted celebrity endorsements, and generic feature bullet points.
+            </p>
+          </div>
+          <div class="comparison-card good">
+            <div class="comparison-label">Brand B &bull; Next-Gen Approach</div>
+            <div class="comparison-title">Real &amp; Values-Driven</div>
+            <p class="comparison-text">
+              Features real creators, shares candid customer reviews, highlights sustainable supply chains, and hosts open founder Q&amp;As.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Brand B consistently outperforms because it feels human, participatory, and grounded in mutual respect.
+        </p>
+      </section>
+
+      <section id="takeaways">
+        <div class="takeaways-box">
+          <h3>The Final Takeaway</h3>
+          <p>
+            Gen Z doesn’t simply buy products — they buy into philosophies, identities, and communities. If your brand can tell an authentic story, leverage modern systems to scale distribution, and reward community engagement, you won't just sell to Gen Z — you'll grow together with them.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <!-- Sticky Sidebar -->
+    <aside class="post-sidebar">
+      <!-- Table of Contents Card (Desktop) -->
+      <div class="sidebar-card desktop-toc">
+        <div class="sidebar-card-title">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#introduction" class="toc-link is-active">01. Introduction</a></li>
+          <li><a href="#gen-z-lens" class="toc-link">02. The Gen Z Lens</a></li>
+          <li><a href="#brand-challenge" class="toc-link">03. Challenge for Legacy Brands</a></li>
+          <li><a href="#how-to-build" class="toc-link">04. 5-Point Tactical Playbook</a></li>
+          <li><a href="#case-study" class="toc-link">05. Case Study: Brand A vs B</a></li>
+          <li><a href="#takeaways" class="toc-link">06. The Final Takeaway</a></li>
+        </ul>
+      </div>
+
+      <!-- Author Bio Card -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">About the author</div>
+        <div class="author-sidebar-info">
+          <div class="post-author-avatar">A</div>
+          <div>
+            <div style="font-weight:700; color:var(--color-ink);">Aitie Editorial</div>
+            <div style="font-size:.82rem; color:rgba(26,26,46,.55);">Research &amp; Strategy</div>
+          </div>
+        </div>
+        <p class="author-sidebar-desc">
+          We research consumer attention shifts, algorithmic distribution, and creator ecosystems to help modern brands scale.
+        </p>
+      </div>
+
+      <!-- Quick Newsletter Box -->
+      <div class="sidebar-card" style="background:linear-gradient(145deg, rgba(255,255,255,0.9), rgba(237,234,251,0.7));">
+        <div class="sidebar-card-title">Weekly Insights</div>
+        <p style="font-size:.88rem; line-height:1.5; color:rgba(26,26,46,.72); margin-bottom:1rem;">
+          Get our latest breakdowns on brand scale and digital growth in your inbox.
+        </p>
+        <form onsubmit="event.preventDefault(); alert('Subscribed!');" style="display:flex; flex-direction:column; gap:.6rem;">
+          <input type="email" placeholder="Your email..." required style="padding:.65rem .9rem; border-radius:999px; border:1px solid rgba(84,87,132,0.2); font-family:inherit; font-size:.88rem; outline:none;">
+          <button type="submit" style="padding:.65rem; border-radius:999px; border:none; background:var(--color-card-active); color:#fff; font-family:inherit; font-weight:700; font-size:.88rem; cursor:pointer;">Subscribe</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Related Articles Section -->
+  <!-- <section class="related-section">
+    <div class="related-header">
+      <h2 class="related-title">More from the Blog</h2>
+      <a href="blogs.html" class="back-link" style="margin-bottom:0;">View all articles &rarr;</a>
+    </div>
+
+    <div class="related-grid">
+      <a href="blog-detail.html" class="related-card">
+        <div class="related-card-img-wrap">
+          <img src="images/feature-hero/1.jpeg" alt="Authenticity Over Perfection" class="related-card-img">
+        </div>
+        <div class="related-card-body">
+          <span class="badge-tag" style="margin-bottom:.6rem; display:inline-block;">Gen Z Culture</span>
+          <h3 class="related-card-title">Why Modern Consumers Choose Authenticity Over Glossy Ads</h3>
+          <span style="font-size:.82rem; color:rgba(26,26,46,.55);">Oct 1, 2026 &bull; 4 min read</span>
+        </div>
+      </a>
+
+      <a href="blog-detail.html" class="related-card">
+        <div class="related-card-img-wrap">
+          <img src="images/feature-hero/2.jpeg" alt="Micro Creator Reach" class="related-card-img">
+        </div>
+        <div class="related-card-body">
+          <span class="badge-tag" style="margin-bottom:.6rem; display:inline-block;">Growth &amp; Scale</span>
+          <h3 class="related-card-title">The Micro-Creator Shift: Unlocking True Organic Reach on TikTok</h3>
+          <span style="font-size:.82rem; color:rgba(26,26,46,.55);">Sep 28, 2026 &bull; 5 min read</span>
+        </div>
+      </a>
+
+      <a href="blog-detail.html" class="related-card">
+        <div class="related-card-img-wrap">
+          <img src="images/feature-hero/4.jpeg" alt="AI Powered Content" class="related-card-img">
+        </div>
+        <div class="related-card-body">
+          <span class="badge-tag" style="margin-bottom:.6rem; display:inline-block;">AI Automation</span>
+          <h3 class="related-card-title">Scaling Brand Consistency with AI-Powered Content Systems</h3>
+          <span style="font-size:.82rem; color:rgba(26,26,46,.55);">Sep 24, 2026 &bull; 7 min read</span>
+        </div>
+      </a>
+    </div>
+  </section> -->
+</div>
+
+<!-- Mobile Floating Action Button & Drawer -->
+<div class="blog-mobile-backdrop" id="blogMobileBackdrop"></div>
+
+<nav class="blog-mobile-drawer" id="blogMobileDrawer" aria-label="Table of contents">
+  <div class="blog-mobile-drawer-title">On this page</div>
+  <a href="#introduction" class="blog-drawer-link is-active">01. Introduction</a>
+  <a href="#gen-z-lens" class="blog-drawer-link">02. The Gen Z Lens</a>
+  <a href="#brand-challenge" class="blog-drawer-link">03. Challenge for Legacy Brands</a>
+  <a href="#how-to-build" class="blog-drawer-link">04. 5-Point Tactical Playbook</a>
+  <a href="#case-study" class="blog-drawer-link">05. Case Study: Brand A vs B</a>
+  <a href="#takeaways" class="blog-drawer-link">06. The Final Takeaway</a>
+</nav>
+
+<button class="blog-mobile-fab" id="blogMobileFab" aria-label="Table of contents" aria-expanded="false">
+  <span class="fab-icon-menu">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="6" x2="21" y2="6"></line>
+      <line x1="8" y1="12" x2="21" y2="12"></line>
+      <line x1="8" y1="18" x2="21" y2="18"></line>
+      <line x1="3" y1="6" x2="3.01" y2="6"></line>
+      <line x1="3" y1="12" x2="3.01" y2="12"></line>
+      <line x1="3" y1="18" x2="3.01" y2="18"></line>
+    </svg>
+  </span>
+  <span class="fab-icon-close">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </span>
+  <span>On this page</span>
+</button>
+
+<!-- Global Portable Footer -->
+<div id="global-footer-mount"></div>
+
+<!-- Global Components Scripts -->
+<script src="sections/navbar.js"></script>
+<script src="sections/footer.js"></script>
+
+<!-- Table of Contents & Mobile Drawer Interactive Script -->
+<script>
+  (function () {
+    var fab = document.getElementById('blogMobileFab');
+    var drawer = document.getElementById('blogMobileDrawer');
+    var backdrop = document.getElementById('blogMobileBackdrop');
+    var drawerLinks = document.querySelectorAll('.blog-drawer-link');
+    var sections = document.querySelectorAll('article section[id]');
+    var desktopLinks = document.querySelectorAll('.toc-link');
+    var allLinks = document.querySelectorAll('.toc-link, .blog-drawer-link');
+
+    function toggleDrawer(open) {
+      if (!drawer || !backdrop || !fab) return;
+      var willOpen = typeof open === 'boolean' ? open : !drawer.classList.contains('is-open');
+      drawer.classList.toggle('is-open', willOpen);
+      backdrop.classList.toggle('is-open', willOpen);
+      fab.classList.toggle('is-open', willOpen);
+      fab.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+
+    if (fab) {
+      fab.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleDrawer();
+      });
+    }
+
+    if (backdrop) {
+      backdrop.addEventListener('click', function () {
+        toggleDrawer(false);
+      });
+    }
+
+    drawerLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        toggleDrawer(false);
+      });
+    });
+
+    function updateToc() {
+      var scrollPos = window.scrollY + 160;
+      var currentId = '';
+
+      sections.forEach(function (sec) {
+        if (sec.offsetTop <= scrollPos) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+
+      if (currentId) {
+        allLinks.forEach(function (link) {
+          var isMatch = link.getAttribute('href') === '#' + currentId;
+          link.classList.toggle('is-active', isMatch);
+          link.classList.toggle('active', isMatch);
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateToc, { passive: true });
+    updateToc();
+  })();
+</script>
+</body>
+</html>

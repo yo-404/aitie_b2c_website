@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account &amp; Data Deletion Request | Aitie</title>
+<meta name="description" content="Learn how to permanently delete your Aitie account and associated data, or submit an instant online data deletion request with our team." />
+<meta property="og:title" content="Account &amp; Data Deletion Request | Aitie" />
+<meta property="og:description" content="Learn how to permanently delete your Aitie account and associated data, or submit an instant online data deletion request with our team." />
+<meta property="og:image" content="images/og-image/Data-meta.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+  href="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/css/az-lifelogx.webflow.shared.0ad6c3188.css"
+  rel="stylesheet"
+  type="text/css"
+  integrity="sha384-CtbDGI87PEaky2ahnZofkLPE4c2n+KA41KzEfavpBVai5JldiPICwr607fU30DPW"
+  crossorigin="anonymous" />
+<style>
+  /* hide the page scrollbar (content still scrolls) */
+  html{scrollbar-width:none;-ms-overflow-style:none;}
+  html::-webkit-scrollbar,body::-webkit-scrollbar{width:0!important;height:0!important;display:none!important;}
+
+  :root {
+    --color-1: #EDEAFB;
+    --color-2: #b9adf6;
+    --color-accent: #545784;
+    --color-accent-dark: #33355a;
+    --color-card-active: #46486e;
+    --color-ink: #1a1a2e;
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-1);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: var(--font-family);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    background:
+      radial-gradient(120% 60% at 85% 0%, rgba(255,255,255,.55), transparent 55%),
+      linear-gradient(160deg, var(--color-1), var(--color-2) 85%);
+    position: relative;
+  }
+
+  .pp-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    background: transparent !important;
+  }
+
+  .pp-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .pp-blob.b1 { width: 26rem; height: 26rem; background: #fff; top: 0; right: -6rem; }
+  .pp-blob.b2 { width: 22rem; height: 22rem; background: var(--color-accent); bottom: 0; left: -6rem; opacity: .14; }
+
+  /* ---------- header ---------- */
+  .pp-header {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 3.4rem 2rem 2.2rem;
+  }
+  .pp-eyebrow-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+  }
+  .pp-brand-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity .2s ease;
+  }
+  .pp-brand-logo:hover {
+    opacity: .8;
+  }
+  .pp-logo-img {
+    height: 1.8rem;
+    width: auto;
+    display: block;
+  }
+  .pp-updated {
+    font-size: .85rem;
+    color: rgba(26,26,46,.55);
+    font-weight: 500;
+  }
+  h1, h2, h3, h4, h5, h6,
+  .pp-heading {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.08;
+    max-width: 34rem;
+    color: var(--color-ink) !important;
+  }
+  .pp-heading .muted { color: var(--color-accent) !important; }
+  .pp-dek {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(26,26,46,.68);
+    max-width: 42rem;
+  }
+
+  /* ---------- layout ---------- */
+  .pp-shell {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  /* ---------- nav (desktop sticky) ---------- */
+  .pp-nav {
+    position: sticky;
+    top: 2rem !important;
+    align-self: start;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    padding: 1.4rem 1.1rem;
+    border-radius: 1.3rem;
+    background: rgba(255,255,255,.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(84,87,132,.16);
+    box-shadow: 0 10px 30px rgba(26,26,46,.04);
+  }
+  .pp-nav::-webkit-scrollbar { width: 4px; }
+  .pp-nav::-webkit-scrollbar-track { background: transparent; }
+  .pp-nav::-webkit-scrollbar-thumb { background: rgba(84,87,132,.2); border-radius: 4px; }
+
+  .pp-nav-title {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    margin-bottom: .5rem;
+    padding-left: .6rem;
+  }
+  .pp-nav a {
+    font-size: .86rem;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    padding: .5rem .6rem;
+    border-radius: .7rem;
+    transition: background .2s ease, color .2s ease;
+  }
+  .pp-nav a:hover { background: rgba(84,87,132,.1); }
+  .pp-nav a.is-active { background: var(--color-accent-dark); color: #fff; }
+
+  /* ---------- content card ---------- */
+  .pp-content {
+    background: rgba(255,255,255,.62);
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 1.6rem;
+    padding: clamp(1.8rem, 4vw, 3.2rem);
+  }
+
+  .pp-section {
+    scroll-margin-top: 6.5rem;
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+  }
+  .pp-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .pp-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-bottom: .9rem;
+    display: flex;
+    align-items: baseline;
+    gap: .6rem;
+    color: var(--color-ink) !important;
+  }
+  .pp-section h2 .num {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(84,87,132,.12);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+  }
+  .pp-section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.4rem 0 .6rem;
+    color: var(--color-accent-dark) !important;
+  }
+  .pp-section p {
+    font-size: .95rem;
+    line-height: 1.7;
+    color: rgba(26,26,46,.78);
+    max-width: 42rem;
+  }
+  .pp-section p + p { margin-top: .8rem; }
+  .pp-section ul {
+    margin: .8rem 0 .4rem 0;
+    padding-left: 1.3rem;
+    max-width: 42rem;
+  }
+  .pp-section li {
+    font-size: .95rem;
+    line-height: 1.65;
+    color: rgba(26,26,46,.78);
+    margin-bottom: .5rem;
+  }
+  .pp-section li::marker { color: var(--color-accent); }
+  .pp-section strong { color: var(--color-ink); font-weight: 600; }
+  .pp-section a {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+  }
+
+  /* Numbered steps with circular badges */
+  .pp-steps {
+    counter-reset: s;
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0;
+    max-width: 42rem;
+  }
+  .pp-steps li {
+    counter-increment: s;
+    position: relative;
+    padding: 0 0 1.2rem 3rem;
+    margin: 0;
+    font-size: .95rem;
+    line-height: 1.65;
+    color: rgba(26,26,46,.78);
+  }
+  .pp-steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 0;
+    top: .1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-accent-dark);
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(51,53,90,.2);
+  }
+  .pp-steps li:last-child {
+    padding-bottom: 0;
+  }
+
+  .pp-card {
+    margin-top: 1rem;
+    padding: 1.25rem 1.4rem;
+    border-radius: 1.1rem;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 42rem;
+  }
+  .pp-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: var(--color-ink);
+  }
+  .pp-card p {
+    margin-top: .4rem;
+  }
+  .pp-card p:first-of-type {
+    margin-top: .5rem;
+  }
+  .pp-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .pp-table {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 42rem;
+    border-collapse: collapse;
+    font-size: .88rem;
+    background: rgba(255,255,255,.5);
+    border-radius: .9rem;
+    overflow: hidden;
+  }
+  .pp-table th, .pp-table td {
+    text-align: left;
+    padding: .75rem .95rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+    vertical-align: top;
+  }
+  .pp-table th {
+    background: rgba(84,87,132,.1);
+    color: var(--color-accent-dark);
+    font-weight: 600;
+  }
+  .pp-table tr:last-child td { border-bottom: none; }
+
+  .pp-callout {
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    background: rgba(84,87,132,.08);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 42rem;
+  }
+  .pp-callout p { color: rgba(26,26,46,.75); }
+
+  .pp-contact-box {
+    margin-top: 1rem;
+    display: grid;
+    gap: .3rem;
+    padding: 1.2rem 1.3rem;
+    border-radius: 1.1rem;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 28rem;
+  }
+  .pp-contact-box .label {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    text-transform: none;
+  }
+  .pp-contact-box .value {
+    font-size: .92rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    margin-bottom: .6rem;
+  }
+
+  .pp-footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2.2rem 2rem;
+    font-size: .85rem;
+    color: #000 !important;
+    font-weight: 500;
+  }
+  .pp-footer-link {
+    color: #000 !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity .2s ease;
+  }
+  .pp-footer-link:hover {
+    opacity: .75;
+    text-decoration: underline;
+  }
+
+  /* ---------- mobile floating navigation button & drawer ---------- */
+  .pp-mobile-fab, .pp-mobile-drawer, .pp-mobile-backdrop {
+    display: none;
+  }
+
+  /* ---------- responsive ---------- */
+  @media screen and (max-width: 991px) {
+    .pp-header {
+      padding: 2.5rem 1.25rem 1.5rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-heading {
+      font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-dek {
+      font-size: 0.98rem !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-shell {
+      grid-template-columns: 1fr !important;
+      padding: 0 1.25rem 4rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      gap: 1.5rem !important;
+    }
+    .pp-content {
+      padding: 1.5rem 1.25rem !important;
+      border-radius: 1.3rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-nav {
+      display: none !important;
+    }
+    .pp-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-table {
+      display: table !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      table-layout: fixed !important;
+    }
+    .pp-table th, .pp-table td {
+      padding: 0.6rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-card, .pp-callout, .pp-contact-box, .pp-steps, .pp-section p, .pp-section ul {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-steps li {
+      padding: 0 0 1rem 2.6rem !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-steps li::before {
+      width: 1.8rem !important;
+      height: 1.8rem !important;
+      font-size: 0.78rem !important;
+    }
+    .pp-contact-box {
+      max-width: 100% !important;
+    }
+
+    /* Mobile Floating Action Button */
+    .pp-mobile-fab {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.2rem;
+      z-index: 120;
+      padding: .75rem 1.25rem;
+      border-radius: 2rem;
+      background: var(--color-accent-dark);
+      color: #fff;
+      font-family: var(--font-family);
+      font-size: .88rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 12px 28px rgba(26,26,46,.3);
+      cursor: pointer;
+      transition: transform .2s ease, background .25s ease, box-shadow .25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pp-mobile-fab:active {
+      transform: scale(.95);
+    }
+    .pp-mobile-fab .pp-fab-icon-close { display: none; }
+    .pp-mobile-fab.is-open {
+      background: #1a1a2e;
+    }
+    .pp-mobile-fab.is-open .pp-fab-icon-menu { display: none; }
+    .pp-mobile-fab.is-open .pp-fab-icon-close { display: block; }
+
+    /* Mobile Backdrop */
+    .pp-mobile-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,26,46,.32);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 105;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .pp-mobile-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Mobile Floating Drawer */
+    .pp-mobile-drawer {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      position: fixed;
+      bottom: 4.8rem;
+      right: 1.2rem;
+      width: clamp(16rem, 84vw, 20rem);
+      max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+      padding: 1.2rem 1rem;
+      border-radius: 1.4rem;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(84,87,132,.22);
+      box-shadow: 0 16px 40px rgba(26,26,46,.25);
+      z-index: 110;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(16px) scale(.96);
+      transition: all .25s cubic-bezier(.16,1,.3,1);
+    }
+    .pp-mobile-drawer.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+    .pp-mobile-drawer-title {
+      font-size: .75rem;
+      font-weight: 700;
+      color: rgba(26,26,46,.45);
+      padding: .4rem .6rem .6rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .pp-mobile-drawer a {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--color-ink);
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: .8rem;
+      transition: background .2s ease, color .2s ease;
+    }
+    .pp-mobile-drawer a:hover { background: rgba(84,87,132,.12); }
+    .pp-mobile-drawer a.is-active {
+      background: var(--color-accent-dark);
+      color: #fff;
+    }
+    .pp-mobile-drawer::-webkit-scrollbar { width: 4px; }
+    .pp-mobile-drawer::-webkit-scrollbar-thumb { background: rgba(84,87,132,.25); border-radius: 4px; }
+  }
+</style>
+</head>
+<body>
+<div class="pp-page">
+  <div class="pp-blob b1"></div>
+  <div class="pp-blob b2"></div>
+
+  <header class="pp-header">
+    <div class="pp-eyebrow-row">
+      <a href="/" class="pp-brand-logo" aria-label="Aitie Home">
+        <img src="images/logotype_dark (1).svg" alt="Aitie" class="pp-logo-img">
+      </a>
+      <span class="pp-updated">Last updated: August 31, 2026</span>
+    </div>
+    <h1 class="pp-heading">Delete your <span class="muted">data.</span></h1>
+    <p class="pp-dek">You can delete your Aitie account and the personal data attached to it at any time. This page explains exactly how to do it, what gets deleted, what we have to keep and why, and how long it takes.</p>
+  </header>
+
+  <div class="pp-shell">
+
+    <nav class="pp-nav" id="ppNav">
+      <div class="pp-nav-title">On this page</div>
+      <a href="#in-app">01. In-app deletion</a>
+      <a href="#web">02. Request without app</a>
+      <a href="#timeline">03. Timeline &amp; grace period</a>
+      <a href="#deleted">04. What gets deleted</a>
+      <a href="#kept">05. What we have to keep</a>
+      <a href="#partial">06. Partial deletion</a>
+      <a href="#third">07. Service providers</a>
+      <a href="#rights">08. Your other rights</a>
+      <a href="#help">09. Questions &amp; contact</a>
+    </nav>
+
+    <main class="pp-content">
+
+      <section class="pp-section" id="in-app">
+        <h2><span class="num">01</span>Delete from inside the app</h2>
+        <p>This is the fastest route, and it is the one we recommend because we can confirm your identity automatically through your authenticated session.</p>
+
+        <ol class="pp-steps">
+          <li><strong>Open Aitie and sign in:</strong> Launch the application on your Android or iOS device.</li>
+          <li><strong>Navigate to Privacy Settings:</strong> Go to <strong>Settings</strong> &rarr; <strong>Privacy &amp; Data</strong>.</li>
+          <li><strong>Initiate Deletion:</strong> Tap <strong>Delete my account</strong>.</li>
+          <li><strong>Confirm Intent:</strong> Read what will be deleted, then confirm. You will be asked to re-enter your password or type a confirmation word — ensuring the account cannot be deleted by an accidental tap.</li>
+          <li><strong>Grace Period Scheduled:</strong> Your account is scheduled for deletion and you are signed out across all devices. We display the exact date when your data will be permanently erased, and send confirmation to your registered email.</li>
+        </ol>
+
+        <div class="pp-callout">
+          <p><strong>Consider downloading your data first:</strong> Before requesting deletion, you can export a complete copy of your records from <strong>Settings &rarr; Privacy &amp; Data &rarr; Download my data</strong>. Once permanent erasure finishes, data cannot be recovered.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="web">
+        <h2><span class="num">02</span>Request deletion from here, without the app</h2>
+        <p>If you have uninstalled the app, cannot sign in, or would simply rather not use it, you can submit a deletion request directly to our team.</p>
+
+        <div class="pp-card">
+          <h3>Send your request</h3>
+          <p><strong>Email:</strong> <a href="mailto:privacy@aitie.app">privacy@aitie.app</a> with the subject line <strong>&ldquo;Delete my Aitie account&rdquo;</strong></p>
+          <p style="margin-top:1rem"><strong>Please include:</strong></p>
+          <ul>
+            <li>The registered <strong>email address or mobile phone number</strong> linked to your Aitie account.</li>
+            <li>Your full name as displayed in your profile.</li>
+            <li>Whether you require <strong>full account and data deletion</strong>, or specific records removed.</li>
+          </ul>
+        </div>
+
+        <p style="margin-top:1rem">We confirm receipt of manual requests within 2 business days. Because deletion is permanent and irreversible, we verify that the request genuinely originates from the rightful account owner before executing — typically via a one-time verification code sent to your registered email or phone.</p>
+        <p>There is never any fee or penalty for requesting data deletion, and we will never ask you why.</p>
+      </section>
+
+      <section class="pp-section" id="timeline">
+        <h2><span class="num">03</span>What happens, and when</h2>
+        <table class="pp-table">
+          <thead>
+            <tr><th>Stage</th><th>What happens</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Immediately</strong></td>
+              <td>Your account is deactivated. You are signed out on every device and cannot sign in. Your Work Passport stops appearing to companies, public sharing links are disabled, and you are removed from active job shortlists and Job Pools.</td>
+            </tr>
+            <tr>
+              <td><strong>Days 1&ndash;30<br>(Grace period)</strong></td>
+              <td>Your data is safeguarded in an inactive state. <strong>You can cancel deletion at any point in this 30-day window</strong> simply by logging back into the app, or by writing to privacy@aitie.app &mdash; your account will be restored in full.</td>
+            </tr>
+            <tr>
+              <td><strong>Day 30</strong></td>
+              <td>Deletion is executed. Your personal data is permanently erased or irreversibly anonymized across all active systems. <strong>From this point forward, it cannot be recovered.</strong></td>
+            </tr>
+            <tr>
+              <td><strong>After day 30</strong></td>
+              <td>Encrypted backups rotate on a scheduled rolling cycle and are fully overwritten within standard retention intervals (up to 30 days). Integrated service providers complete erasure on their respective cycles.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pp-callout">
+          <p><strong>Active engagements &amp; escrow notice:</strong> If you have an active Job, Commit, or consultation session in progress, funds held in escrow, or an unresolved dispute, account closure is paused until the matter is settled. Deletion cannot be used to circumvent ongoing financial or contractual obligations.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="deleted">
+        <h2><span class="num">04</span>What gets deleted</h2>
+        <p>Upon permanent deletion, the following personal data categories are thoroughly erased or anonymized:</p>
+        <ul>
+          <li><strong>Account credentials &amp; identity:</strong> Full name, email address, phone number, password hash, handle, profile avatar, Digital ID, and active auth sessions.</li>
+          <li><strong>Work Passport:</strong> Verified experience, education, skill badges, certifications, portfolio links, and uploaded proof-of-work files.</li>
+          <li><strong>Reputation &amp; reviews:</strong> Vouches, ratings, and endorsements associated with your profile.</li>
+          <li><strong>KYC records:</strong> PAN and Aadhaar identity numbers, and document scan uploads.</li>
+          <li><strong>Consultation history:</strong> Public availability slots, session schedules, and past bookings.</li>
+          <li><strong>Applications &amp; assessments:</strong> Job Pool submissions, assessment results, and review histories.</li>
+          <li><strong>Communications:</strong> Direct chat messages, attachments, and notification records.</li>
+          <li><strong>Device identifiers:</strong> Push notification tokens and device fingerprint logs.</li>
+          <li><strong>Aitie Score:</strong> Cumulative points history and tier classifications.</li>
+        </ul>
+        <p>Any CV or résumé uploaded for initial profile creation is already deleted automatically within 24 hours of upload, well before account deletion.</p>
+      </section>
+
+      <section class="pp-section" id="kept">
+        <h2><span class="num">05</span>What we have to keep, and why</h2>
+        <p>Certain limited records must be retained under applicable statutory laws, financial regulations, and audit requirements. These records are isolated, stripped of direct identifiers, and restricted from general access:</p>
+        <table class="pp-table">
+          <thead>
+            <tr><th>Retained record</th><th>Legal basis</th><th>Retention period</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Financial &amp; tax transactions</strong> (invoices, payout history, GST logs)</td>
+              <td>Mandatory under Indian tax, banking, and company laws. Payment partners retain transaction logs under RBI rules.</td>
+              <td>8 years (statutory requirement)</td>
+            </tr>
+            <tr>
+              <td><strong>Consent logs</strong> (record of consent given and withdrawn)</td>
+              <td>Required under the Digital Personal Data Protection Act, 2023 to demonstrate legal processing compliance.</td>
+              <td>Duration required by law, de-identified</td>
+            </tr>
+            <tr>
+              <td><strong>Record of deletion request</strong></td>
+              <td>Proof of compliance demonstrating that your deletion request was duly processed and executed.</td>
+              <td>3 years</td>
+            </tr>
+            <tr>
+              <td><strong>Executed contracts &amp; NDAs</strong></td>
+              <td>Remain legally enforceable civil contracts between the respective parties.</td>
+              <td>Term of agreement + statutory limitation period</td>
+            </tr>
+            <tr>
+              <td><strong>Completed deliverables</strong></td>
+              <td>Intellectual property ownership transferred to the client upon milestone payment release.</td>
+              <td>Held by the client organization</td>
+            </tr>
+            <tr>
+              <td><strong>Fraud &amp; security logs</strong> (banned accounts)</td>
+              <td>Prevent abusive actors from re-registering and protect user safety.</td>
+              <td>Minimal security hashes only</td>
+            </tr>
+            <tr>
+              <td><strong>Aggregated analytics</strong></td>
+              <td>Fully anonymized statistical metrics that cannot identify any individual.</td>
+              <td>Indefinite</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="pp-section" id="partial">
+        <h2><span class="num">06</span>Deleting specific data without closing your account</h2>
+        <p>You do not need to delete your entire account to remove specific personal information. You can selectively manage your records at any time:</p>
+        <ul>
+          <li><strong>Edit Work Passport:</strong> Remove individual roles, projects, portfolio links, or skills directly in your profile.</li>
+          <li><strong>Disable Public Sharing:</strong> Turn off public sharing or regenerate your link so past URLs stop functioning immediately.</li>
+          <li><strong>Withdraw Marketing Consent:</strong> Turn off promotional communications at <strong>Settings &rarr; Privacy &amp; Data &rarr; Manage consents</strong> or via unsubscribe links in emails.</li>
+          <li><strong>Specific Removal Requests:</strong> Email <a href="mailto:privacy@aitie.app">privacy@aitie.app</a> with specific category removal requests, which we will honor subject to statutory requirements.</li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="third">
+        <h2><span class="num">07</span>Data held by service providers</h2>
+        <p>When an account deletion executes, we issue automated instructions to sub-processors handling data on our behalf (cloud infrastructure, notification services, analytics) to delete associated records.</p>
+        <p><strong>Regulated payment partner:</strong> Our licensed escrow and payout partner <strong>Razorpay</strong> retains customer KYC and transaction records in accordance with Reserve Bank of India (RBI) and Prevention of Money Laundering Act (PMLA) regulations. To inquire about records held directly with Razorpay, please consult their portal.</p>
+      </section>
+
+      <section class="pp-section" id="rights">
+        <h2><span class="num">08</span>Your other data rights</h2>
+        <p>Account deletion is one of several fundamental rights granted to you under India's Digital Personal Data Protection Act, 2023. You also have rights to access your summary of data, correct inaccuracies, withdraw consents, and nominate a representative in the event of death or incapacity.</p>
+        <p>Read our full <a href="privacy-policy (1).html">Privacy Policy</a> to understand each of your rights and how to exercise them.</p>
+      </section>
+
+      <section class="pp-section" id="help">
+        <h2><span class="num">09</span>Questions &amp; Grievance Redressal</h2>
+        <div class="pp-card">
+          <h3>Privacy &amp; Data Requests</h3>
+          <p><strong>Email:</strong> <a href="mailto:privacy@aitie.app">privacy@aitie.app</a></p>
+          <p>We acknowledge all requests within 2 business days and complete processing in accordance with statutory timelines.</p>
+        </div>
+
+        <div class="pp-contact-box" style="margin-top:1rem">
+          <span class="label">Grievance Redressal Officer</span>
+          <span class="value">Data Protection &amp; Grievance Officer, Aitie</span>
+          <span class="label">Email</span>
+          <span class="value"><a href="mailto:grievance@aitie.app">grievance@aitie.app</a></span>
+          <span class="label">Jurisdiction</span>
+          <span class="value">Data Protection Board of India</span>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Mobile Floating Action Button -->
+  <button type="button" class="pp-mobile-fab" id="ppMobileFab" aria-label="Toggle Sections Menu">
+    <svg class="pp-fab-icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="pp-fab-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span>Sections</span>
+  </button>
+
+  <!-- Mobile Backdrop & Floating Drawer -->
+  <div class="pp-mobile-backdrop" id="ppMobileBackdrop"></div>
+  <div class="pp-mobile-drawer" id="ppMobileDrawer">
+    <div class="pp-mobile-drawer-title">Select Section</div>
+    <a href="#in-app">01. In-app deletion</a>
+    <a href="#web">02. Request without app</a>
+    <a href="#timeline">03. Timeline &amp; grace period</a>
+    <a href="#deleted">04. What gets deleted</a>
+    <a href="#kept">05. What we have to keep</a>
+    <a href="#partial">06. Partial deletion</a>
+    <a href="#third">07. Service providers</a>
+    <a href="#rights">08. Your other rights</a>
+    <a href="#help">09. Questions &amp; contact</a>
+  </div>
+
+  <footer class="pp-footer">
+    &copy; 2026 <a href="/" class="pp-footer-link">Aitie</a>. All rights reserved.
+  </footer>
+</div>
+
+<script>
+// highlight active nav item on scroll & mobile drawer interactions
+(function(){
+  var sections = document.querySelectorAll('.pp-section');
+  var desktopLinks = document.querySelectorAll('.pp-nav a');
+  var mobileLinks  = document.querySelectorAll('.pp-mobile-drawer a');
+
+  var fab      = document.getElementById('ppMobileFab');
+  var drawer   = document.getElementById('ppMobileDrawer');
+  var backdrop = document.getElementById('ppMobileBackdrop');
+
+  function toggleMobileMenu(open) {
+    var isOpened = typeof open === 'boolean' ? open : !drawer.classList.contains('is-open');
+    drawer.classList.toggle('is-open', isOpened);
+    backdrop.classList.toggle('is-open', isOpened);
+    fab.classList.toggle('is-open', isOpened);
+  }
+
+  if (fab) {
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  }
+
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  });
+
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections[0] ? sections[0].id : null;
+    sections.forEach(function(sec){
+      if (sec.offsetTop <= pos) current = sec.id;
+    });
+
+    desktopLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+    mobileLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+
+
+<script
+  src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6929b6c693cb856e01ef7c05"
+  type="text/javascript"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.schunk.36b8fb49256177c8.js"
+  type="text/javascript"
+  integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G"
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.schunk.a3cbb3185d18fbed.js"
+  type="text/javascript"
+  integrity="sha384-RfQMkUsiU/BkFuRhPHMl5vr2f8VghPtdlGoFXS4JinwDQT9H7MX5wNzEJOtPFcF7"
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.schunk.aa0a58b04bc44fad.js"
+  type="text/javascript"
+  integrity="sha384-dT168gAz/STH5p0kk9S8F2jiXMiOq6mu5HgfyRftvaany5WjueKgLnxczSVKLO1H"
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.44d68a72.d84ba9fb862d9208.js"
+  type="text/javascript"
+  integrity="sha384-Ya+MAF580jZ188jvw95g5xVhlQabU95IHSHny16T/ZD401SVr8vmb8Zl58weHSRd"
+  crossorigin="anonymous"></script>
+</body>
+</html>

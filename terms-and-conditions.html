@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms and Conditions — User Agreement | Aitie</title>
+<meta name="description" content="Review the terms, community standards, escrow policies, and conditions governing the use of the Aitie platform, website, and mobile apps." />
+<meta property="og:title" content="Terms and Conditions — User Agreement | Aitie" />
+<meta property="og:description" content="Review the terms, community standards, escrow policies, and conditions governing the use of the Aitie platform, website, and mobile apps." />
+<meta property="og:image" content="images/og-image/terms-meta.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* hide the page scrollbar (content still scrolls) */
+  html{scrollbar-width:none;-ms-overflow-style:none;}
+  html::-webkit-scrollbar,body::-webkit-scrollbar{width:0!important;height:0!important;display:none!important;}
+
+  :root {
+    --color-1: #EDEAFB;
+    --color-2: #b9adf6;
+    --color-accent: #545784;
+    --color-accent-dark: #33355a;
+    --color-card-active: #46486e;
+    --color-ink: #1a1a2e;
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-1);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: var(--font-family);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    background:
+      radial-gradient(120% 60% at 85% 0%, rgba(255,255,255,.55), transparent 55%),
+      linear-gradient(160deg, var(--color-1), var(--color-2) 85%);
+    position: relative;
+  }
+
+  .pp-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden !important;
+    background: transparent !important;
+  }
+
+  .pp-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .pp-blob.b1 { width: 26rem; height: 26rem; background: #fff; top: 0; right: -6rem; }
+  .pp-blob.b2 { width: 22rem; height: 22rem; background: var(--color-accent); bottom: 0; left: -6rem; opacity: .14; }
+
+  /* ---------- header ---------- */
+  .pp-header {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 3.4rem 2rem 2.2rem;
+  }
+  .pp-eyebrow-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+  }
+  .pp-brand-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity .2s ease;
+  }
+  .pp-brand-logo:hover {
+    opacity: .8;
+  }
+  .pp-logo-img {
+    height: 1.8rem;
+    width: auto;
+    display: block;
+  }
+  .pp-updated {
+    font-size: .85rem;
+    color: rgba(26,26,46,.55);
+    font-weight: 500;
+  }
+  .pp-heading {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.08;
+    max-width: 30rem;
+  }
+  .pp-heading .muted { color: var(--color-accent); }
+  .pp-dek {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(26,26,46,.68);
+    max-width: 38rem;
+  }
+
+  /* ---------- layout ---------- */
+  .pp-shell {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  /* ---------- nav (desktop sticky) ---------- */
+  .pp-nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    padding: 1.4rem 1.1rem;
+    border-radius: 1.3rem;
+    background: rgba(255,255,255,.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(84,87,132,.16);
+    box-shadow: 0 10px 30px rgba(26,26,46,.04);
+  }
+  .pp-nav::-webkit-scrollbar { width: 4px; }
+  .pp-nav::-webkit-scrollbar-track { background: transparent; }
+  .pp-nav::-webkit-scrollbar-thumb { background: rgba(84,87,132,.2); border-radius: 4px; }
+
+  .pp-nav-title {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    margin-bottom: .5rem;
+    padding-left: .6rem;
+  }
+  .pp-nav a {
+    font-size: .86rem;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    padding: .5rem .6rem;
+    border-radius: .7rem;
+    transition: background .2s ease, color .2s ease;
+  }
+  .pp-nav a:hover { background: rgba(84,87,132,.1); }
+  .pp-nav a.is-active { background: var(--color-accent-dark); color: #fff; }
+
+  /* ---------- content card ---------- */
+  .pp-content {
+    background: rgba(255,255,255,.62);
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 1.6rem;
+    padding: clamp(1.8rem, 4vw, 3.2rem);
+  }
+
+  .pp-section {
+    scroll-margin-top: 2rem;
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+  }
+  .pp-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .pp-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-bottom: .9rem;
+    display: flex;
+    align-items: baseline;
+    gap: .6rem;
+  }
+  .pp-section h2 .num {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(84,87,132,.12);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+  }
+  .pp-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.1rem 0 .5rem;
+    color: var(--color-accent-dark);
+  }
+  .pp-section p {
+    font-size: .95rem;
+    line-height: 1.7;
+    color: rgba(26,26,46,.78);
+    max-width: 42rem;
+  }
+  .pp-section p + p { margin-top: .8rem; }
+  .pp-section ul {
+    margin: .8rem 0 .4rem 0;
+    padding-left: 1.3rem;
+    max-width: 42rem;
+  }
+  .pp-section li {
+    font-size: .95rem;
+    line-height: 1.65;
+    color: rgba(26,26,46,.78);
+    margin-bottom: .5rem;
+  }
+  .pp-section li::marker { color: var(--color-accent); }
+  .pp-section strong { color: var(--color-ink); font-weight: 600; }
+
+  .pp-table {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 42rem;
+    border-collapse: collapse;
+    font-size: .88rem;
+    background: rgba(255,255,255,.5);
+    border-radius: .9rem;
+    overflow: hidden;
+  }
+  .pp-table th, .pp-table td {
+    text-align: left;
+    padding: .7rem .9rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+    vertical-align: top;
+  }
+  .pp-table th {
+    background: rgba(84,87,132,.1);
+    color: var(--color-accent-dark);
+    font-weight: 600;
+  }
+  .pp-table tr:last-child td { border-bottom: none; }
+
+  .pp-callout {
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    background: rgba(84,87,132,.08);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 42rem;
+  }
+  .pp-callout p { color: rgba(26,26,46,.75); }
+
+  .pp-contact-box {
+    margin-top: 1rem;
+    display: grid;
+    gap: .3rem;
+    padding: 1.2rem 1.3rem;
+    border-radius: 1.1rem;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 26rem;
+  }
+  .pp-contact-box .label {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    text-transform: none;
+  }
+  .pp-contact-box .value {
+    font-size: .92rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    margin-bottom: .6rem;
+  }
+
+  .pp-footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2.2rem 2rem;
+    font-size: .85rem;
+    color: #000 !important;
+    font-weight: 500;
+  }
+  .pp-footer-link {
+    color: #000 !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity .2s ease;
+  }
+  .pp-footer-link:hover {
+    opacity: .75;
+    text-decoration: underline;
+  }
+
+  /* ---------- mobile floating navigation button & drawer ---------- */
+  .pp-mobile-fab, .pp-mobile-drawer, .pp-mobile-backdrop {
+    display: none;
+  }
+
+  /* ---------- responsive ---------- */
+  @media screen and (max-width: 991px) {
+    html, body {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+    .pp-page {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+    .pp-header {
+      padding: 2.5rem 1.25rem 1.5rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-heading {
+      font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-dek {
+      font-size: 0.98rem !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-shell {
+      grid-template-columns: 1fr !important;
+      padding: 0 1.25rem 4rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      gap: 1.5rem !important;
+    }
+    .pp-content {
+      padding: 1.5rem 1.25rem !important;
+      border-radius: 1.3rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-nav {
+      display: none !important;
+    }
+    .pp-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-table {
+      display: table !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      table-layout: fixed !important;
+    }
+    .pp-table th, .pp-table td {
+      padding: 0.6rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-card, .pp-callout, .pp-contact-box, .pp-steps, .pp-section p, .pp-section ul, .pp-section ol {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-contact-box {
+      max-width: 100%;
+    }
+
+    /* Mobile Floating Action Button */
+    .pp-mobile-fab {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.2rem;
+      z-index: 120;
+      padding: .75rem 1.25rem;
+      border-radius: 2rem;
+      background: var(--color-accent-dark);
+      color: #fff;
+      font-family: var(--font-family);
+      font-size: .88rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 12px 28px rgba(26,26,46,.3);
+      cursor: pointer;
+      transition: transform .2s ease, background .25s ease, box-shadow .25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pp-mobile-fab:active {
+      transform: scale(.95);
+    }
+    .pp-mobile-fab .pp-fab-icon-close { display: none; }
+    .pp-mobile-fab.is-open {
+      background: #1a1a2e;
+    }
+    .pp-mobile-fab.is-open .pp-fab-icon-menu { display: none; }
+    .pp-mobile-fab.is-open .pp-fab-icon-close { display: block; }
+
+    /* Mobile Backdrop */
+    .pp-mobile-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,26,46,.32);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 105;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .pp-mobile-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Mobile Floating Drawer */
+    .pp-mobile-drawer {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      position: fixed;
+      bottom: 4.8rem;
+      right: 1.2rem;
+      width: clamp(16rem, 84vw, 20rem);
+      max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+      padding: 1.2rem 1rem;
+      border-radius: 1.4rem;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(84,87,132,.22);
+      box-shadow: 0 20px 45px rgba(26,26,46,.25);
+      z-index: 110;
+      opacity: 0;
+      transform: translateY(14px) scale(.95);
+      pointer-events: none;
+      transition: opacity .3s cubic-bezier(.16,1,.3,1), transform .3s cubic-bezier(.16,1,.3,1);
+    }
+    .pp-mobile-drawer.is-open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+    .pp-mobile-drawer-title {
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: rgba(26,26,46,.45);
+      margin-bottom: .4rem;
+      padding: 0 .6rem;
+    }
+    .pp-mobile-drawer a {
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--color-accent-dark);
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: .8rem;
+      transition: background .2s ease, color .2s ease;
+    }
+    .pp-mobile-drawer a:hover { background: rgba(84,87,132,.12); }
+    .pp-mobile-drawer a.is-active {
+      background: var(--color-accent-dark);
+      color: #fff;
+    }
+    .pp-mobile-drawer::-webkit-scrollbar { width: 4px; }
+    .pp-mobile-drawer::-webkit-scrollbar-thumb { background: rgba(84,87,132,.25); border-radius: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pp-page">
+  <div class="pp-blob b1"></div>
+  <div class="pp-blob b2"></div>
+
+  <header class="pp-header">
+    <div class="pp-eyebrow-row">
+      <a href="/" class="pp-brand-logo" aria-label="Aitie Home">
+        <img src="images/logotype_dark (1).svg" alt="Aitie" class="pp-logo-img">
+      </a>
+      <span class="pp-updated">Last updated: August 31, 2026</span>
+    </div>
+    <h1 class="pp-heading">Terms &amp; <span class="muted">conditions.</span></h1>
+    <p class="pp-dek">These terms govern your use of the Aitie platform and mobile application. They should be read together with our Privacy Policy, which explains how we handle personal data in line with India's Digital Personal Data Protection Act, 2023 (DPDPA).</p>
+  </header>
+
+  <div class="pp-shell">
+
+    <nav class="pp-nav" id="ppNav">
+      <div class="pp-nav-title">On this page</div>
+      <a href="#introduction">01. Introduction</a>
+      <a href="#definitions">02. Definitions</a>
+      <a href="#eligibility">03. Eligibility</a>
+      <a href="#account">04. Account registration</a>
+      <a href="#use-of-service">05. Use of the Service</a>
+      <a href="#user-content">06. User content &amp; conduct</a>
+      <a href="#ip">07. Intellectual property</a>
+      <a href="#fees">08. Fees &amp; payment</a>
+      <a href="#data-protection">09. Data protection</a>
+      <a href="#third-party">10. Third-party services</a>
+      <a href="#disclaimers">11. Disclaimers</a>
+      <a href="#liability">12. Limitation of liability</a>
+      <a href="#indemnity">13. Indemnification</a>
+      <a href="#termination">14. Termination</a>
+      <a href="#grievance">15. Grievance redressal</a>
+      <a href="#governing-law">16. Governing law &amp; jurisdiction</a>
+      <a href="#changes">17. Changes to these terms</a>
+      <a href="#contact">18. Contact us</a>
+    </nav>
+
+    <main class="pp-content">
+
+      <section class="pp-section" id="introduction">
+        <h2><span class="num">01</span>Introduction</h2>
+        <p>These Terms &amp; Conditions ("Terms") form a binding agreement between you and Aitie ("we", "us", "our"), governing your access to and use of the Aitie platform and mobile application (the "Service"). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, please do not use the Service.</p>
+        <p>Our collection and processing of your personal data is described separately in our Privacy Policy, which is incorporated into these Terms by reference and is prepared in accordance with India's Digital Personal Data Protection Act, 2023 ("DPDPA").</p>
+      </section>
+
+      <section class="pp-section" id="definitions">
+        <h2><span class="num">02</span>Definitions</h2>
+        <table class="pp-table">
+          <tr><th>Term</th><th>Meaning</th></tr>
+          <tr><td>Service</td><td>The Aitie platform, website, and mobile application, and any related features or tools we make available.</td></tr>
+          <tr><td>User / you</td><td>Any individual who accesses or uses the Service, referred to as a Data Principal under the DPDPA where personal data is concerned.</td></tr>
+          <tr><td>Content</td><td>Any text, data, files, images, or other material submitted to, or generated through, the Service.</td></tr>
+          <tr><td>Account</td><td>The registered profile you create to access and use the Service.</td></tr>
+          <tr><td>Aitie / we / us</td><td>Aitie Technologies, the Data Fiduciary that operates the Service and determines the purpose and means of processing personal data on it.</td></tr>
+        </table>
+      </section>
+
+      <section class="pp-section" id="eligibility">
+        <h2><span class="num">03</span>Eligibility</h2>
+        <p>You must be at least 18 years of age, or the age of legal majority in your jurisdiction, to create an Account and use the Service on your own behalf. Where the Service is used by or on behalf of a child (an individual below 18 years of age), we require verifiable consent from a parent or lawful guardian, consistent with the children's data provisions of the DPDPA.</p>
+        <p>By using the Service, you represent that you have the legal capacity to enter into these Terms and that the information you provide to us is accurate and complete.</p>
+      </section>
+
+      <section class="pp-section" id="account">
+        <h2><span class="num">04</span>Account registration</h2>
+        <ul>
+          <li>You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your Account</li>
+          <li>You must notify us promptly of any unauthorised use of your Account or any other breach of security</li>
+          <li>You agree to provide accurate, current, and complete information during registration and to keep it updated</li>
+          <li>We may suspend or terminate an Account that we reasonably believe has been compromised or used in violation of these Terms</li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="use-of-service">
+        <h2><span class="num">05</span>Use of the Service</h2>
+        <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable licence to access and use the Service for its intended purpose. You agree not to:</p>
+        <ul>
+          <li>Use the Service for any unlawful purpose or in violation of any applicable law, including the DPDPA and the Information Technology Act, 2000</li>
+          <li>Attempt to gain unauthorised access to the Service, other accounts, or our systems and networks</li>
+          <li>Reverse-engineer, decompile, or otherwise attempt to extract the source code of the Service, except as permitted by law</li>
+          <li>Interfere with or disrupt the integrity or performance of the Service, including through malware, scraping, or automated access</li>
+          <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity</li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="user-content">
+        <h2><span class="num">06</span>User content &amp; conduct</h2>
+        <p>You retain ownership of any Content you submit through the Service. By submitting Content, you grant us a worldwide, royalty-free licence to host, store, reproduce, and display that Content solely to operate, provide, and improve the Service.</p>
+        <p>You are solely responsible for the Content you submit and agree that it will not be unlawful, defamatory, infringing, or otherwise harmful. We reserve the right, but are not obligated, to review, remove, or restrict access to any Content that violates these Terms.</p>
+      </section>
+
+      <section class="pp-section" id="ip">
+        <h2><span class="num">07</span>Intellectual property</h2>
+        <p>The Service, including its software, design, text, graphics, logos, and other materials (excluding User Content), is owned by Aitie or our licensors and is protected by applicable intellectual property laws. Nothing in these Terms transfers any ownership rights to you, except the limited licence to use the Service as set out above.</p>
+        <p>You may not copy, modify, distribute, sell, or lease any part of the Service, nor reverse-engineer or attempt to extract the source code, unless permitted by applicable law or with our prior written consent.</p>
+      </section>
+
+      <section class="pp-section" id="fees">
+        <h2><span class="num">08</span>Fees &amp; payment</h2>
+        <p>Certain features of the Service may be offered on a paid or subscription basis. Where applicable, fees, billing cycles, and refund conditions will be presented to you at the point of purchase. All payments are processed through our secure third-party payment partners; we do not store your full payment card details.</p>
+        <p>Fees are non-refundable except where required by law or expressly stated otherwise at the time of purchase. We may change our fees prospectively, with reasonable notice to existing subscribers.</p>
+      </section>
+
+      <section class="pp-section" id="data-protection">
+        <h2><span class="num">09</span>Data protection</h2>
+        <p>We process personal data collected through the Service as a Data Fiduciary under the DPDPA, based on your free, specific, informed, and unambiguous consent or another lawful basis recognised under that Act. Full details of what we collect, why, how long we retain it, and the rights available to you as a Data Principal — including access, correction, erasure, grievance redressal, and withdrawal of consent — are set out in our Privacy Policy.</p>
+        <p>By using the Service, you acknowledge that you have read and understood the Privacy Policy. In the event of any conflict between these Terms and the Privacy Policy on matters of personal data processing, the Privacy Policy will govern.</p>
+      </section>
+
+      <section class="pp-section" id="third-party">
+        <h2><span class="num">10</span>Third-party services</h2>
+        <p>The Service may contain links to, or integrate with, third-party websites, products, or services that we do not own or control. We are not responsible for the content, policies, or practices of any third party. Your use of third-party services is subject to their own terms and privacy policies, and we encourage you to review them.</p>
+      </section>
+
+      <section class="pp-section" id="disclaimers">
+        <h2><span class="num">11</span>Disclaimers</h2>
+        <p>The Service is provided on an "as is" and "as available" basis, without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement, to the maximum extent permitted by applicable law.</p>
+        <p>We do not warrant that the Service will be uninterrupted, error-free, or completely secure, and we are not liable for any loss arising from your reliance on the Service or its outputs.</p>
+      </section>
+
+      <section class="pp-section" id="liability">
+        <h2><span class="num">12</span>Limitation of liability</h2>
+        <p>To the maximum extent permitted by applicable law, Aitie and its officers, employees, and affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenue, data, or goodwill, arising out of or in connection with your use of the Service.</p>
+        <p>Our aggregate liability for any claim arising out of or relating to these Terms or the Service will not exceed the amount you paid us, if any, for the Service in the twelve months preceding the claim.</p>
+      </section>
+
+      <section class="pp-section" id="indemnity">
+        <h2><span class="num">13</span>Indemnification</h2>
+        <p>You agree to indemnify and hold harmless Aitie, its officers, employees, and affiliates from any claims, damages, liabilities, and expenses (including reasonable legal fees) arising out of your use of the Service, your Content, or your violation of these Terms or any applicable law.</p>
+      </section>
+
+      <section class="pp-section" id="termination">
+        <h2><span class="num">14</span>Termination</h2>
+        <p>You may stop using the Service and close your Account at any time. We may suspend or terminate your access to the Service, with or without notice, if we reasonably believe you have violated these Terms, misused the Service, or if required to do so by law.</p>
+        <p>On termination, your right to use the Service ends immediately. Provisions that by their nature should survive termination — including intellectual property, disclaimers, limitation of liability, and indemnification — will continue to apply. Any personal data associated with your Account will be handled in accordance with our Privacy Policy and applicable retention obligations under the DPDPA.</p>
+      </section>
+
+      <section class="pp-section" id="grievance">
+        <h2><span class="num">15</span>Grievance redressal</h2>
+        <p>If you have any complaint or grievance regarding the Service or these Terms, including matters relating to the processing of your personal data, you may contact our Grievance Officer below. We will acknowledge and address grievances within the timelines prescribed under applicable law, including the Information Technology Act, 2000 and the DPDPA.</p>
+        <div class="pp-contact-box">
+          <div class="label">Grievance Officer</div>
+          <div class="value">Grievance Redressal Team</div>
+          <div class="label">Email</div>
+          <div class="value">app@aitie.co</div>
+          <div class="label">Address</div>
+          <div class="value">Aitie Technologies, Bangalore, Karnataka, India</div>
+        </div>
+        <div class="pp-callout">
+          <p>If you remain unsatisfied with our response regarding a personal data grievance, you may escalate the matter to the Data Protection Board of India once its complaint mechanism is operationalised by the Government of India.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="governing-law">
+        <h2><span class="num">16</span>Governing law &amp; jurisdiction</h2>
+        <p>These Terms are governed by the laws of India. Subject to the grievance redressal process above, any dispute arising out of or in connection with these Terms or the Service will be subject to the exclusive jurisdiction of the courts at Bangalore, Karnataka, India.</p>
+      </section>
+
+      <section class="pp-section" id="changes">
+        <h2><span class="num">17</span>Changes to these terms</h2>
+        <p>We may update these Terms from time to time to reflect changes in our Service, business practices, or legal requirements. We will notify you of material changes by email or in-app notice and update the "Last updated" date at the top of this page. Continued use of the Service after changes take effect constitutes acceptance of the revised Terms.</p>
+      </section>
+
+      <section class="pp-section" id="contact">
+        <h2><span class="num">18</span>Contact us</h2>
+        <p>For any questions about these Terms or the Service, reach out to us at:</p>
+        <div class="pp-contact-box">
+          <div class="label">Company</div>
+          <div class="value">Aitie</div>
+          <div class="label">Email</div>
+          <div class="value">app@aitie.co</div>
+          <div class="label">Address</div>
+          <div class="value">Aitie Technologies, Bangalore, Karnataka, India</div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Mobile Floating Trigger Button -->
+  <button type="button" class="pp-mobile-fab" id="ppMobileFab" aria-label="Toggle Sections Menu">
+    <svg class="pp-fab-icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="pp-fab-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span>Sections</span>
+  </button>
+
+  <!-- Mobile Backdrop & Floating Drawer -->
+  <div class="pp-mobile-backdrop" id="ppMobileBackdrop"></div>
+  <div class="pp-mobile-drawer" id="ppMobileDrawer">
+    <div class="pp-mobile-drawer-title">Select Section</div>
+    <a href="#introduction">01. Introduction</a>
+    <a href="#definitions">02. Definitions</a>
+    <a href="#eligibility">03. Eligibility</a>
+    <a href="#account">04. Account registration</a>
+    <a href="#use-of-service">05. Use of the Service</a>
+    <a href="#user-content">06. User content &amp; conduct</a>
+    <a href="#ip">07. Intellectual property</a>
+    <a href="#fees">08. Fees &amp; payment</a>
+    <a href="#data-protection">09. Data protection</a>
+    <a href="#third-party">10. Third-party services</a>
+    <a href="#disclaimers">11. Disclaimers</a>
+    <a href="#liability">12. Limitation of liability</a>
+    <a href="#indemnity">13. Indemnification</a>
+    <a href="#termination">14. Termination</a>
+    <a href="#grievance">15. Grievance redressal</a>
+    <a href="#governing-law">16. Governing law &amp; jurisdiction</a>
+    <a href="#changes">17. Changes to these terms</a>
+    <a href="#contact">18. Contact us</a>
+  </div>
+
+  <footer class="pp-footer">
+    &copy; <span id="ppYear"></span> <a href="/" class="pp-footer-link">Aitie</a>. All rights reserved.
+  </footer>
+</div>
+
+<script>
+document.getElementById('ppYear').textContent = new Date().getFullYear();
+
+// highlight active nav item on scroll & mobile drawer interactions
+(function(){
+  var sections = document.querySelectorAll('.pp-section');
+  var desktopLinks = document.querySelectorAll('.pp-nav a');
+  var mobileLinks  = document.querySelectorAll('.pp-mobile-drawer a');
+
+  var fab      = document.getElementById('ppMobileFab');
+  var drawer   = document.getElementById('ppMobileDrawer');
+  var backdrop = document.getElementById('ppMobileBackdrop');
+
+  function toggleMobileMenu(open) {
+    var isOpened = typeof open === 'boolean' ? open : !drawer.classList.contains('is-open');
+    drawer.classList.toggle('is-open', isOpened);
+    backdrop.classList.toggle('is-open', isOpened);
+    fab.classList.toggle('is-open', isOpened);
+  }
+
+  if (fab) {
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  }
+
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  });
+
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections[0] ? sections[0].id : null;
+    sections.forEach(function(sec){
+      if (sec.offsetTop <= pos) current = sec.id;
+    });
+
+    desktopLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+    mobileLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>

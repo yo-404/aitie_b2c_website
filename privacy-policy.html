@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — How We Protect Your Data | Aitie</title>
+<meta name="description" content="Read Aitie's Privacy Policy to understand how we collect, store, and protect your personal information in compliance with global privacy laws." />
+<meta property="og:title" content="Privacy Policy — How We Protect Your Data | Aitie" />
+<meta property="og:description" content="Read Aitie's Privacy Policy to understand how we collect, store, and protect your personal information in compliance with global privacy laws." />
+<meta property="og:image" content="images/og-image/privacy-meta.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* hide the page scrollbar (content still scrolls) */
+  html{scrollbar-width:none;-ms-overflow-style:none;}
+  html::-webkit-scrollbar,body::-webkit-scrollbar{width:0!important;height:0!important;display:none!important;}
+
+  :root {
+    --color-1: #EDEAFB;
+    --color-2: #b9adf6;
+    --color-accent: #545784;
+    --color-accent-dark: #33355a;
+    --color-card-active: #46486e;
+    --color-ink: #1a1a2e;
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-1);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: var(--font-family);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    background:
+      radial-gradient(120% 60% at 85% 0%, rgba(255,255,255,.55), transparent 55%),
+      linear-gradient(160deg, var(--color-1), var(--color-2) 85%);
+    position: relative;
+  }
+
+  .pp-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden !important;
+    background: transparent !important;
+  }
+
+  .pp-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .pp-blob.b1 { width: 26rem; height: 26rem; background: #fff; top: 0; right: -6rem; }
+  .pp-blob.b2 { width: 22rem; height: 22rem; background: var(--color-accent); bottom: 0; left: -6rem; opacity: .14; }
+
+  /* ---------- header ---------- */
+  .pp-header {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 3.4rem 2rem 2.2rem;
+  }
+  .pp-eyebrow-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+  }
+  .pp-brand-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity .2s ease;
+  }
+  .pp-brand-logo:hover {
+    opacity: .8;
+  }
+  .pp-logo-img {
+    height: 1.8rem;
+    width: auto;
+    display: block;
+  }
+  .pp-updated {
+    font-size: .85rem;
+    color: rgba(26,26,46,.55);
+    font-weight: 500;
+  }
+  .pp-heading {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.08;
+    max-width: 30rem;
+  }
+  .pp-heading .muted { color: var(--color-accent); }
+  .pp-dek {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(26,26,46,.68);
+    max-width: 38rem;
+  }
+
+  /* ---------- layout ---------- */
+  .pp-shell {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  /* ---------- nav (desktop sticky) ---------- */
+  .pp-nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    padding: 1.4rem 1.1rem;
+    border-radius: 1.3rem;
+    background: rgba(255,255,255,.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(84,87,132,.16);
+    box-shadow: 0 10px 30px rgba(26,26,46,.04);
+  }
+  .pp-nav::-webkit-scrollbar { width: 4px; }
+  .pp-nav::-webkit-scrollbar-track { background: transparent; }
+  .pp-nav::-webkit-scrollbar-thumb { background: rgba(84,87,132,.2); border-radius: 4px; }
+
+  .pp-nav-title {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    margin-bottom: .5rem;
+    padding-left: .6rem;
+  }
+  .pp-nav a {
+    font-size: .86rem;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    padding: .5rem .6rem;
+    border-radius: .7rem;
+    transition: background .2s ease, color .2s ease;
+  }
+  .pp-nav a:hover { background: rgba(84,87,132,.1); }
+  .pp-nav a.is-active { background: var(--color-accent-dark); color: #fff; }
+
+  /* ---------- content card ---------- */
+  .pp-content {
+    background: rgba(255,255,255,.62);
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 1.6rem;
+    padding: clamp(1.8rem, 4vw, 3.2rem);
+  }
+
+  .pp-section {
+    scroll-margin-top: 2rem;
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+  }
+  .pp-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .pp-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-bottom: .9rem;
+    display: flex;
+    align-items: baseline;
+    gap: .6rem;
+  }
+  .pp-section h2 .num {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(84,87,132,.12);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+  }
+  .pp-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.1rem 0 .5rem;
+    color: var(--color-accent-dark);
+  }
+  .pp-section p {
+    font-size: .95rem;
+    line-height: 1.7;
+    color: rgba(26,26,46,.78);
+    max-width: 42rem;
+  }
+  .pp-section p + p { margin-top: .8rem; }
+  .pp-section ul {
+    margin: .8rem 0 .4rem 0;
+    padding-left: 1.3rem;
+    max-width: 42rem;
+  }
+  .pp-section li {
+    font-size: .95rem;
+    line-height: 1.65;
+    color: rgba(26,26,46,.78);
+    margin-bottom: .5rem;
+  }
+  .pp-section li::marker { color: var(--color-accent); }
+  .pp-section strong { color: var(--color-ink); font-weight: 600; }
+
+  .pp-table {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 42rem;
+    border-collapse: collapse;
+    font-size: .88rem;
+    background: rgba(255,255,255,.5);
+    border-radius: .9rem;
+    overflow: hidden;
+  }
+  .pp-table th, .pp-table td {
+    text-align: left;
+    padding: .7rem .9rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+    vertical-align: top;
+  }
+  .pp-table th {
+    background: rgba(84,87,132,.1);
+    color: var(--color-accent-dark);
+    font-weight: 600;
+  }
+  .pp-table tr:last-child td { border-bottom: none; }
+
+  .pp-callout {
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    background: rgba(84,87,132,.08);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 42rem;
+  }
+  .pp-callout p { color: rgba(26,26,46,.75); }
+
+  .pp-contact-box {
+    margin-top: 1rem;
+    display: grid;
+    gap: .3rem;
+    padding: 1.2rem 1.3rem;
+    border-radius: 1.1rem;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 26rem;
+  }
+  .pp-contact-box .label {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    text-transform: none;
+  }
+  .pp-contact-box .value {
+    font-size: .92rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    margin-bottom: .6rem;
+  }
+
+  .pp-footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2.2rem 2rem;
+    font-size: .85rem;
+    color: #000 !important;
+    font-weight: 500;
+  }
+  .pp-footer-link {
+    color: #000 !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity .2s ease;
+  }
+  .pp-footer-link:hover {
+    opacity: .75;
+    text-decoration: underline;
+  }
+
+  /* ---------- mobile floating navigation button & drawer ---------- */
+  .pp-mobile-fab, .pp-mobile-drawer, .pp-mobile-backdrop {
+    display: none;
+  }
+
+  /* ---------- responsive ---------- */
+  @media screen and (max-width: 991px) {
+    html, body {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+    .pp-page {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+    .pp-header {
+      padding: 2.5rem 1.25rem 1.5rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-heading {
+      font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-dek {
+      font-size: 0.98rem !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-shell {
+      grid-template-columns: 1fr !important;
+      padding: 0 1.25rem 4rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      gap: 1.5rem !important;
+    }
+    .pp-content {
+      padding: 1.5rem 1.25rem !important;
+      border-radius: 1.3rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-nav {
+      display: none !important;
+    }
+    .pp-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-table {
+      display: table !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      table-layout: fixed !important;
+    }
+    .pp-table th, .pp-table td {
+      padding: 0.6rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-card, .pp-callout, .pp-contact-box, .pp-steps, .pp-section p, .pp-section ul, .pp-section ol {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-contact-box {
+      max-width: 100%;
+    }
+
+    /* Mobile Floating Action Button */
+    .pp-mobile-fab {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.2rem;
+      z-index: 120;
+      padding: .75rem 1.25rem;
+      border-radius: 2rem;
+      background: var(--color-accent-dark);
+      color: #fff;
+      font-family: var(--font-family);
+      font-size: .88rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 12px 28px rgba(26,26,46,.3);
+      cursor: pointer;
+      transition: transform .2s ease, background .25s ease, box-shadow .25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pp-mobile-fab:active {
+      transform: scale(.95);
+    }
+    .pp-mobile-fab .pp-fab-icon-close { display: none; }
+    .pp-mobile-fab.is-open {
+      background: #1a1a2e;
+    }
+    .pp-mobile-fab.is-open .pp-fab-icon-menu { display: none; }
+    .pp-mobile-fab.is-open .pp-fab-icon-close { display: block; }
+
+    /* Mobile Backdrop */
+    .pp-mobile-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,26,46,.32);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 105;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .pp-mobile-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Mobile Floating Drawer */
+    .pp-mobile-drawer {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      position: fixed;
+      bottom: 4.8rem;
+      right: 1.2rem;
+      width: clamp(16rem, 84vw, 20rem);
+      max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+      padding: 1.2rem 1rem;
+      border-radius: 1.4rem;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(84,87,132,.22);
+      box-shadow: 0 20px 45px rgba(26,26,46,.25);
+      z-index: 110;
+      opacity: 0;
+      transform: translateY(14px) scale(.95);
+      pointer-events: none;
+      transition: opacity .3s cubic-bezier(.16,1,.3,1), transform .3s cubic-bezier(.16,1,.3,1);
+    }
+    .pp-mobile-drawer.is-open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+    .pp-mobile-drawer-title {
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: rgba(26,26,46,.45);
+      margin-bottom: .4rem;
+      padding: 0 .6rem;
+    }
+    .pp-mobile-drawer a {
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--color-accent-dark);
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: .8rem;
+      transition: background .2s ease, color .2s ease;
+    }
+    .pp-mobile-drawer a:hover { background: rgba(84,87,132,.12); }
+    .pp-mobile-drawer a.is-active {
+      background: var(--color-accent-dark);
+      color: #fff;
+    }
+    .pp-mobile-drawer::-webkit-scrollbar { width: 4px; }
+    .pp-mobile-drawer::-webkit-scrollbar-thumb { background: rgba(84,87,132,.25); border-radius: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pp-page">
+  <div class="pp-blob b1"></div>
+  <div class="pp-blob b2"></div>
+
+  <header class="pp-header">
+    <div class="pp-eyebrow-row">
+      <a href="/" class="pp-brand-logo" aria-label="Aitie Home">
+        <img src="images/logotype_dark (1).svg" alt="Aitie" class="pp-logo-img">
+      </a>
+      <span class="pp-updated">Last updated: August 31, 2026</span>
+    </div>
+    <h1 class="pp-heading">Privacy <span class="muted">policy.</span></h1>
+    <p class="pp-dek">This policy explains what personal data we collect, why we collect it, and the rights you have over it, in line with India's Digital Personal Data Protection Act, 2023 (DPDPA).</p>
+  </header>
+
+  <div class="pp-shell">
+
+    <nav class="pp-nav" id="ppNav">
+      <div class="pp-nav-title">On this page</div>
+      <a href="#introduction">01. Introduction</a>
+      <a href="#definitions">02. Definitions</a>
+      <a href="#data-we-collect">03. Data we collect</a>
+      <a href="#how-we-use">04. How we use it</a>
+      <a href="#consent">05. Consent</a>
+      <a href="#sharing">06. Sharing &amp; disclosure</a>
+      <a href="#cross-border">07. Cross-border transfer</a>
+      <a href="#retention">08. Retention</a>
+      <a href="#security">09. Security</a>
+      <a href="#your-rights">10. Your rights</a>
+      <a href="#children">11. Children's data</a>
+      <a href="#grievance">12. Grievance redressal</a>
+      <a href="#board">13. Data Protection Board</a>
+      <a href="#changes">14. Changes to this policy</a>
+      <a href="#contact">15. Contact us</a>
+    </nav>
+
+    <main class="pp-content">
+
+      <section class="pp-section" id="introduction">
+        <h2><span class="num">01</span>Introduction</h2>
+        <p>Aitie ("we", "us", "our") operates the Aitie platform and mobile application (the "Service"). We are a Data Fiduciary as defined under the Digital Personal Data Protection Act, 2023 ("DPDPA"), and this policy sets out how we collect, use, store, share and protect personal data belonging to you, the Data Principal, when you use our Service.</p>
+        <p>By using the Service, you agree to the collection and use of your personal data as described in this policy. If you do not agree, please do not use the Service.</p>
+      </section>
+
+      <section class="pp-section" id="definitions">
+        <h2><span class="num">02</span>Definitions</h2>
+        <table class="pp-table">
+          <tr><th>Term</th><th>Meaning</th></tr>
+          <tr><td>Personal Data</td><td>Any data about an individual who is identifiable by or in relation to such data.</td></tr>
+          <tr><td>Data Principal</td><td>The individual to whom the personal data relates — that's you. Where the individual is a child, includes their parent or lawful guardian.</td></tr>
+          <tr><td>Data Fiduciary</td><td>The entity that determines the purpose and means of processing personal data — that's us (Aitie).</td></tr>
+          <tr><td>Processing</td><td>Any operation performed on personal data, including collection, storage, use, sharing and erasure.</td></tr>
+          <tr><td>Consent Manager</td><td>A registered platform through which you may give, manage, review or withdraw consent, where applicable.</td></tr>
+        </table>
+      </section>
+
+      <section class="pp-section" id="data-we-collect">
+        <h2><span class="num">03</span>Personal data we collect</h2>
+        <p>We collect only the personal data that is necessary for the purposes described in this policy.</p>
+        <h3>Data you provide directly</h3>
+        <ul>
+          <li>Identity and contact details, such as name, email address, phone number</li>
+          <li>Account information, such as username, profile details, and work history</li>
+          <li>Payment or billing details, processed via our secure payment partners</li>
+          <li>Any information you submit through forms, support requests, or communications with us</li>
+        </ul>
+        <h3>Data collected automatically</h3>
+        <ul>
+          <li>Device and log information, such as IP address, browser type, operating system</li>
+          <li>Usage data, such as pages visited, features used, and time spent on the Service</li>
+          <li>Cookies and similar essential tracking technologies</li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="how-we-use">
+        <h2><span class="num">04</span>How we use your data</h2>
+        <p>We process your personal data only for the specified purpose for which you have given consent, or for a legitimate use recognised under the DPDPA. These purposes include:</p>
+        <ul>
+          <li>Providing, operating, and maintaining the Service</li>
+          <li>Creating and managing your account and WorkPassport</li>
+          <li>Communicating with you about updates, security alerts, and support</li>
+          <li>Sending you relevant updates and marketing communications, where you have opted in</li>
+          <li>Improving and personalising the Service</li>
+          <li>Detecting, preventing, and addressing fraud, abuse, or technical issues</li>
+          <li>Complying with our legal obligations</li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="consent">
+        <h2><span class="num">05</span>Consent</h2>
+        <p>We collect and process your personal data based on your free, specific, informed, unconditional and unambiguous consent, communicated through clear affirmative action. Each consent request is accompanied by a notice, in clear and plain language, describing the personal data being collected and the purpose of processing.</p>
+        <p>You may withdraw your consent at any time, as easily as it was given. Withdrawal of consent does not affect the lawfulness of processing carried out before withdrawal, and where applicable, we will stop further processing within a reasonable time of your withdrawal. Where we use a registered Consent Manager, you may also manage your consent through that platform.</p>
+        <p>In some cases, we may process personal data without consent where permitted under the DPDPA — for example, for compliance with a law, in response to a medical emergency, or for purposes of employment, to the extent applicable.</p>
+      </section>
+
+      <section class="pp-section" id="sharing">
+        <h2><span class="num">06</span>Sharing and disclosure</h2>
+        <p>We do not sell your personal data. We may share it with:</p>
+        <ul>
+          <li><strong>Data Processors</strong> who process personal data on our behalf and under our instructions, such as hosting, analytics, payment, and customer support providers</li>
+          <li><strong>Legal and regulatory authorities</strong>, where required by law, court order, or governmental request</li>
+          <li><strong>Business transfers</strong>, in connection with a merger, acquisition, or sale of assets, subject to equivalent protection of your data</li>
+        </ul>
+        <p>Any third party we share personal data with is bound by contract to process it only for the specified purpose and to apply reasonable security safeguards.</p>
+      </section>
+
+      <section class="pp-section" id="cross-border">
+        <h2><span class="num">07</span>Cross-border data transfer</h2>
+        <p>Your personal data may be stored or processed outside India, including by service providers such as cloud hosting infrastructure. Where we transfer personal data outside India, we do so in accordance with the DPDPA, and will not transfer data to any country or territory that the Central Government has restricted by notification.</p>
+      </section>
+
+      <section class="pp-section" id="retention">
+        <h2><span class="num">08</span>Data retention and erasure</h2>
+        <p>We retain personal data only for as long as necessary to fulfil the purpose for which it was collected, or as required to comply with a legal obligation, whichever is longer.</p>
+        <p>Where you withdraw consent or where the specified purpose is no longer being served, and retention is not otherwise required by law, we will erase your personal data and require our Data Processors to do the same, unless preservation is necessary for a legal proceeding.</p>
+      </section>
+
+      <section class="pp-section" id="security">
+        <h2><span class="num">09</span>Security safeguards</h2>
+        <p>We implement reasonable technical and organisational measures to protect personal data against unauthorised access, disclosure, alteration, and destruction, including encryption in transit and at rest, strict access controls, and regular security reviews.</p>
+        <p>In the event of a personal data breach, we will notify the Data Protection Board of India and affected Data Principals as required under the DPDPA.</p>
+      </section>
+
+      <section class="pp-section" id="your-rights">
+        <h2><span class="num">10</span>Your rights as a Data Principal</h2>
+        <p>Subject to applicable law, you have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> a summary of the personal data we hold about you and the processing activities carried out on it</li>
+          <li><strong>Correction and updating</strong> of inaccurate or incomplete personal data</li>
+          <li><strong>Erasure</strong> of personal data that is no longer necessary for the purpose it was collected</li>
+          <li><strong>Grievance redressal</strong> in relation to any act or omission by us regarding your personal data</li>
+          <li><strong>Nominate</strong> another individual to exercise these rights on your behalf in the event of death or incapacity</li>
+          <li><strong>Withdraw consent</strong> at any time, in relation to any purpose you had previously consented to</li>
+        </ul>
+        <p>To exercise these rights, please write to our Grievance Officer using the contact details below. We will respond within a reasonable time and, in any case, in line with the timelines prescribed under the DPDPA and its rules.</p>
+      </section>
+
+      <section class="pp-section" id="children">
+        <h2><span class="num">11</span>Children's data</h2>
+        <p>Where our Service is directed at, or knowingly used by, children (individuals below 18 years of age), we obtain verifiable consent from a parent or lawful guardian before processing the child's personal data.</p>
+        <p>We do not undertake processing of children's personal data that is likely to cause detrimental effect on their wellbeing, and we do not carry out tracking, behavioural monitoring, or targeted advertising directed at children.</p>
+      </section>
+
+      <section class="pp-section" id="grievance">
+        <h2><span class="num">12</span>Grievance redressal</h2>
+        <p>We have appointed a Grievance Officer to address any concerns or grievances regarding the processing of your personal data. You may contact the Grievance Officer using the details below, and we will respond within the timeline prescribed under the DPDPA.</p>
+        <div class="pp-contact-box">
+          <div class="label">Grievance Officer</div>
+          <div class="value">Grievance Redressal Team</div>
+          <div class="label">Email</div>
+          <div class="value">app@aitie.co</div>
+          <div class="label">Address</div>
+          <div class="value">Aitie Technologies, Bangalore, Karnataka, India</div>
+        </div>
+      </section>
+
+      <section class="pp-section" id="board">
+        <h2><span class="num">13</span>Data Protection Board of India</h2>
+        <p>If you are not satisfied with our response, you may file a complaint with the Data Protection Board of India, established under the DPDPA, which is empowered to inquire into complaints and impose penalties for non-compliance.</p>
+        <div class="pp-callout">
+          <p>The Data Protection Board of India's contact details and complaint process are published on its official website once operationalised by the Government of India.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="changes">
+        <h2><span class="num">14</span>Changes to this policy</h2>
+        <p>We may update this policy from time to time to reflect changes in our practices or legal requirements. We will notify you of material changes by email or in-app notice and update the "Last updated" date at the top of this page. Continued use of the Service after changes take effect constitutes acceptance of the revised policy.</p>
+      </section>
+
+      <section class="pp-section" id="contact">
+        <h2><span class="num">15</span>Contact us</h2>
+        <p>For any questions about this policy or how we handle your personal data, reach out to us at:</p>
+        <div class="pp-contact-box">
+          <div class="label">Company</div>
+          <div class="value">Aitie</div>
+          <div class="label">Email</div>
+          <div class="value">app@aitie.co</div>
+          <div class="label">Address</div>
+          <div class="value">Aitie Technologies, Bangalore, Karnataka, India</div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Mobile Floating Trigger Button -->
+  <button type="button" class="pp-mobile-fab" id="ppMobileFab" aria-label="Toggle Sections Menu">
+    <svg class="pp-fab-icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="pp-fab-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span>Sections</span>
+  </button>
+
+  <!-- Mobile Backdrop & Floating Drawer -->
+  <div class="pp-mobile-backdrop" id="ppMobileBackdrop"></div>
+  <div class="pp-mobile-drawer" id="ppMobileDrawer">
+    <div class="pp-mobile-drawer-title">Select Section</div>
+    <a href="#introduction">01. Introduction</a>
+    <a href="#definitions">02. Definitions</a>
+    <a href="#data-we-collect">03. Personal data we collect</a>
+    <a href="#how-we-use">04. How we use your data</a>
+    <a href="#consent">05. Consent</a>
+    <a href="#sharing">06. Sharing &amp; disclosure</a>
+    <a href="#cross-border">07. Cross-border data transfer</a>
+    <a href="#retention">08. Data retention &amp; erasure</a>
+    <a href="#security">09. Security safeguards</a>
+    <a href="#your-rights">10. Your rights</a>
+    <a href="#children">11. Children's data</a>
+    <a href="#grievance">12. Grievance redressal</a>
+    <a href="#board">13. Data Protection Board</a>
+    <a href="#changes">14. Changes to this policy</a>
+    <a href="#contact">15. Contact us</a>
+  </div>
+
+  <footer class="pp-footer">
+    &copy; <span id="ppYear"></span> <a href="/" class="pp-footer-link">Aitie</a>. All rights reserved.
+  </footer>
+</div>
+
+<script>
+document.getElementById('ppYear').textContent = new Date().getFullYear();
+
+// highlight active nav item on scroll & mobile drawer interactions
+(function(){
+  var sections = document.querySelectorAll('.pp-section');
+  var desktopLinks = document.querySelectorAll('.pp-nav a');
+  var mobileLinks  = document.querySelectorAll('.pp-mobile-drawer a');
+
+  var fab      = document.getElementById('ppMobileFab');
+  var drawer   = document.getElementById('ppMobileDrawer');
+  var backdrop = document.getElementById('ppMobileBackdrop');
+
+  function toggleMobileMenu(open) {
+    var isOpened = typeof open === 'boolean' ? open : !drawer.classList.contains('is-open');
+    drawer.classList.toggle('is-open', isOpened);
+    backdrop.classList.toggle('is-open', isOpened);
+    fab.classList.toggle('is-open', isOpened);
+  }
+
+  if (fab) {
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  }
+
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  });
+
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections[0] ? sections[0].id : null;
+    sections.forEach(function(sec){
+      if (sec.offsetTop <= pos) current = sec.id;
+    });
+
+    desktopLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+    mobileLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>

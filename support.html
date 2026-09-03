@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Center &amp; Help Desk | Aitie</title>
+<meta name="description" content="Find answers, resolve account or payment issues, check support SLAs, and raise a ticket with the Aitie Customer Support &amp; Trust Team." />
+<meta property="og:title" content="Support Center &amp; Help Desk | Aitie" />
+<meta property="og:description" content="Find answers, resolve account or payment issues, check support SLAs, and raise a ticket with the Aitie Customer Support &amp; Trust Team." />
+<meta property="og:image" content="images/og-image/support-meta.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+  href="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/css/az-lifelogx.webflow.shared.0ad6c3188.css"
+  rel="stylesheet"
+  type="text/css"
+  integrity="sha384-CtbDGI87PEaky2ahnZofkLPE4c2n+KA41KzEfavpBVai5JldiPICwr607fU30DPW"
+  crossorigin="anonymous" />
+<style>
+  /* hide the page scrollbar (content still scrolls) */
+  html{scrollbar-width:none;-ms-overflow-style:none;}
+  html::-webkit-scrollbar,body::-webkit-scrollbar{width:0!important;height:0!important;display:none!important;}
+
+  :root {
+    --color-1: #EDEAFB;
+    --color-2: #b9adf6;
+    --color-accent: #545784;
+    --color-accent-dark: #33355a;
+    --color-card-active: #46486e;
+    --color-ink: #1a1a2e;
+    --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-1);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: var(--font-family);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    background:
+      radial-gradient(120% 60% at 85% 0%, rgba(255,255,255,.55), transparent 55%),
+      linear-gradient(160deg, var(--color-1), var(--color-2) 85%);
+    position: relative;
+  }
+
+  .pp-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    background: transparent !important;
+  }
+
+  .pp-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .pp-blob.b1 { width: 26rem; height: 26rem; background: #fff; top: 0; right: -6rem; }
+  .pp-blob.b2 { width: 22rem; height: 22rem; background: var(--color-accent); bottom: 0; left: -6rem; opacity: .14; }
+
+  /* ---------- header ---------- */
+  .pp-header {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 3.4rem 2rem 2.2rem;
+  }
+  .pp-eyebrow-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+  }
+  .pp-brand-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity .2s ease;
+  }
+  .pp-brand-logo:hover {
+    opacity: .8;
+  }
+  .pp-logo-img {
+    height: 1.8rem;
+    width: auto;
+    display: block;
+  }
+  .pp-updated {
+    font-size: .85rem;
+    color: rgba(26,26,46,.55);
+    font-weight: 500;
+  }
+  h1, h2, h3, h4, h5, h6,
+  .pp-heading {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.08;
+    max-width: 34rem;
+    color: var(--color-ink) !important;
+  }
+  .pp-heading .muted { color: var(--color-accent) !important; }
+  .pp-dek {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(26,26,46,.68);
+    max-width: 42rem;
+  }
+
+  /* ---------- layout ---------- */
+  .pp-shell {
+    position: relative;
+    z-index: 2;
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  /* ---------- nav (desktop sticky) ---------- */
+  .pp-nav {
+    position: sticky;
+    top: 2rem !important;
+    align-self: start;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    padding: 1.4rem 1.1rem;
+    border-radius: 1.3rem;
+    background: rgba(255,255,255,.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(84,87,132,.16);
+    box-shadow: 0 10px 30px rgba(26,26,46,.04);
+  }
+  .pp-nav::-webkit-scrollbar { width: 4px; }
+  .pp-nav::-webkit-scrollbar-track { background: transparent; }
+  .pp-nav::-webkit-scrollbar-thumb { background: rgba(84,87,132,.2); border-radius: 4px; }
+
+  .pp-nav-title {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    margin-bottom: .5rem;
+    padding-left: .6rem;
+  }
+  .pp-nav a {
+    font-size: .86rem;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    padding: .5rem .6rem;
+    border-radius: .7rem;
+    transition: background .2s ease, color .2s ease;
+  }
+  .pp-nav a:hover { background: rgba(84,87,132,.1); }
+  .pp-nav a.is-active { background: var(--color-accent-dark); color: #fff; }
+
+  /* ---------- content card ---------- */
+  .pp-content {
+    background: rgba(255,255,255,.62);
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 1.6rem;
+    padding: clamp(1.8rem, 4vw, 3.2rem);
+  }
+
+  .pp-section {
+    scroll-margin-top: 6.5rem;
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+  }
+  .pp-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .pp-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-bottom: .9rem;
+    display: flex;
+    align-items: baseline;
+    gap: .6rem;
+    color: var(--color-ink) !important;
+  }
+  .pp-section h2 .num {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(84,87,132,.12);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+  }
+  .pp-section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.4rem 0 .6rem;
+    color: var(--color-accent-dark) !important;
+  }
+  .pp-section p {
+    font-size: .95rem;
+    line-height: 1.7;
+    color: rgba(26,26,46,.78);
+    max-width: 42rem;
+  }
+  .pp-section p + p { margin-top: .8rem; }
+  .pp-section ul {
+    margin: .8rem 0 .4rem 0;
+    padding-left: 1.3rem;
+    max-width: 42rem;
+  }
+  .pp-section li {
+    font-size: .95rem;
+    line-height: 1.65;
+    color: rgba(26,26,46,.78);
+    margin-bottom: .5rem;
+  }
+  .pp-section li::marker { color: var(--color-accent); }
+  .pp-section strong { color: var(--color-ink); font-weight: 600; }
+  .pp-section a {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+  }
+
+  .pp-card {
+    margin-top: 1rem;
+    padding: 1.25rem 1.4rem;
+    border-radius: 1.1rem;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 42rem;
+  }
+  .pp-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: var(--color-ink);
+  }
+  .pp-card p {
+    margin-top: .4rem;
+  }
+  .pp-card p:first-of-type {
+    margin-top: .5rem;
+  }
+  .pp-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .pp-table {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 42rem;
+    border-collapse: collapse;
+    font-size: .88rem;
+    background: rgba(255,255,255,.5);
+    border-radius: .9rem;
+    overflow: hidden;
+  }
+  .pp-table th, .pp-table td {
+    text-align: left;
+    padding: .75rem .95rem;
+    border-bottom: 1px solid rgba(84,87,132,.14);
+    vertical-align: top;
+  }
+  .pp-table th {
+    background: rgba(84,87,132,.1);
+    color: var(--color-accent-dark);
+    font-weight: 600;
+  }
+  .pp-table tr:last-child td { border-bottom: none; }
+  .pp-table a {
+    color: var(--color-ink);
+    text-decoration: none !important;
+    transition: color .2s ease;
+  }
+  .pp-table a:hover {
+    color: var(--color-accent);
+    text-decoration: none !important;
+  }
+
+  .pp-callout {
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    background: rgba(84,87,132,.08);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 42rem;
+  }
+  .pp-callout p { color: rgba(26,26,46,.75); }
+
+  .pp-contact-box {
+    margin-top: 1rem;
+    display: grid;
+    gap: .3rem;
+    padding: 1.2rem 1.3rem;
+    border-radius: 1.1rem;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(84,87,132,.18);
+    max-width: 28rem;
+  }
+  .pp-contact-box .label {
+    font-size: .74rem;
+    font-weight: 600;
+    color: rgba(26,26,46,.45);
+    text-transform: none;
+  }
+  .pp-contact-box .value {
+    font-size: .92rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    margin-bottom: .6rem;
+  }
+
+  .pp-faq-item {
+    margin-bottom: 1.35rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px dashed rgba(84,87,132,.15);
+  }
+  .pp-faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .pp-faq-q {
+    font-size: .98rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    margin-bottom: .4rem;
+  }
+  .pp-faq-a {
+    font-size: .93rem;
+    line-height: 1.65;
+    color: rgba(26,26,46,.78);
+  }
+
+  .pp-footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2.2rem 2rem;
+    font-size: .85rem;
+    color: #000 !important;
+    font-weight: 500;
+  }
+  .pp-footer-link {
+    color: #000 !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity .2s ease;
+  }
+  .pp-footer-link:hover {
+    opacity: .75;
+    text-decoration: underline;
+  }
+
+  /* ---------- mobile floating navigation button & drawer ---------- */
+  .pp-mobile-fab, .pp-mobile-drawer, .pp-mobile-backdrop {
+    display: none;
+  }
+
+  /* ---------- responsive ---------- */
+  @media screen and (max-width: 991px) {
+    .pp-header {
+      padding: 2.5rem 1.25rem 1.5rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-heading {
+      font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-dek {
+      font-size: 0.98rem !important;
+      max-width: 100% !important;
+      word-break: break-word !important;
+    }
+    .pp-shell {
+      grid-template-columns: 1fr !important;
+      padding: 0 1.25rem 4rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      gap: 1.5rem !important;
+    }
+    .pp-content {
+      padding: 1.5rem 1.25rem !important;
+      border-radius: 1.3rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-nav {
+      display: none !important;
+    }
+    .pp-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .pp-table {
+      display: table !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      table-layout: fixed !important;
+    }
+    .pp-table th, .pp-table td {
+      padding: 0.6rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-card, .pp-callout, .pp-contact-box, .pp-steps, .pp-section p, .pp-section ul {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-steps li {
+      padding: 0 0 1rem 2.6rem !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+    }
+    .pp-steps li::before {
+      width: 1.8rem !important;
+      height: 1.8rem !important;
+      font-size: 0.78rem !important;
+    }
+    .pp-contact-box {
+      max-width: 100% !important;
+    }
+
+    /* Mobile Floating Action Button */
+    .pp-mobile-fab {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.2rem;
+      z-index: 120;
+      padding: .75rem 1.25rem;
+      border-radius: 2rem;
+      background: var(--color-accent-dark);
+      color: #fff;
+      font-family: var(--font-family);
+      font-size: .88rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 12px 28px rgba(26,26,46,.3);
+      cursor: pointer;
+      transition: transform .2s ease, background .25s ease, box-shadow .25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pp-mobile-fab:active {
+      transform: scale(.95);
+    }
+    .pp-mobile-fab .pp-fab-icon-close { display: none; }
+    .pp-mobile-fab.is-open {
+      background: #1a1a2e;
+    }
+    .pp-mobile-fab.is-open .pp-fab-icon-menu { display: none; }
+    .pp-mobile-fab.is-open .pp-fab-icon-close { display: block; }
+
+    /* Mobile Backdrop */
+    .pp-mobile-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,26,46,.32);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 105;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .pp-mobile-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Mobile Floating Drawer */
+    .pp-mobile-drawer {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      position: fixed;
+      bottom: 4.8rem;
+      right: 1.2rem;
+      width: clamp(16rem, 84vw, 20rem);
+      max-height: calc(100vh - 7rem);
+      overflow-y: auto;
+      padding: 1.2rem 1rem;
+      border-radius: 1.4rem;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(84,87,132,.22);
+      box-shadow: 0 16px 40px rgba(26,26,46,.25);
+      z-index: 110;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(16px) scale(.96);
+      transition: all .25s cubic-bezier(.16,1,.3,1);
+    }
+    .pp-mobile-drawer.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+    .pp-mobile-drawer-title {
+      font-size: .75rem;
+      font-weight: 700;
+      color: rgba(26,26,46,.45);
+      padding: .4rem .6rem .6rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .pp-mobile-drawer a {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--color-ink);
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: .8rem;
+      transition: background .2s ease, color .2s ease;
+    }
+    .pp-mobile-drawer a:hover { background: rgba(84,87,132,.12); }
+    .pp-mobile-drawer a.is-active {
+      background: var(--color-accent-dark);
+      color: #fff;
+    }
+    .pp-mobile-drawer::-webkit-scrollbar { width: 4px; }
+    .pp-mobile-drawer::-webkit-scrollbar-thumb { background: rgba(84,87,132,.25); border-radius: 4px; }
+  }
+</style>
+</head>
+<body>
+<div class="pp-page">
+  <div class="pp-blob b1"></div>
+  <div class="pp-blob b2"></div>
+
+  <header class="pp-header">
+    <div class="pp-eyebrow-row">
+      <a href="/" class="pp-brand-logo" aria-label="Aitie Home">
+        <img src="images/logotype_dark (1).svg" alt="Aitie" class="pp-logo-img">
+      </a>
+      <span class="pp-updated">Mon–Fri, 10:00–19:00 IST &nbsp;&middot;&nbsp; Last updated: August 31, 2026</span>
+    </div>
+    <h1 class="pp-heading">Support <span class="muted">center.</span></h1>
+    <p class="pp-dek">Something not working, or not sure how something is meant to work? Start here. Most answers are below; if yours is not, the fastest way to reach a person is from inside the app, where we can already see your account.</p>
+  </header>
+
+  <div class="pp-shell">
+
+    <nav class="pp-nav" id="ppNav">
+      <div class="pp-nav-title">On this page</div>
+      <a href="#contact">01. How to reach us</a>
+      <a href="#response">02. What to expect</a>
+      <a href="#faq">03. Common questions</a>
+      <a href="#report">04. Reporting problems</a>
+      <a href="#security">05. Security disclosure</a>
+      <a href="#app">06. App information</a>
+      <a href="#legal">07. Legal &amp; policies</a>
+    </nav>
+
+    <main class="pp-content">
+
+      <section class="pp-section" id="contact">
+        <h2><span class="num">01</span>How to reach us</h2>
+        <div class="pp-card">
+          <h3>From inside the app &mdash; fastest</h3>
+          <p>Open <strong>Aitie</strong> &rarr; <strong>Settings</strong> &rarr; <strong>Help &amp; Support</strong> &rarr; <strong>Raise a ticket</strong>.</p>
+          <p>Your account details come through with the ticket, so we can look into it without a round of questions first. You can track replies directly in the same place.</p>
+        </div>
+
+        <table class="pp-table">
+          <thead>
+            <tr><th>Department / Purpose</th><th>Email Address</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>General support</strong></td><td><a href="mailto:support@aitie.app">support@aitie.app</a></td></tr>
+            <tr><td><strong>Payments &amp; withdrawals</strong></td><td><a href="mailto:payments@aitie.app">payments@aitie.app</a></td></tr>
+            <tr><td><strong>Privacy &amp; data requests</strong></td><td><a href="mailto:privacy@aitie.app">privacy@aitie.app</a></td></tr>
+            <tr><td><strong>Trust &amp; safety, abuse reports</strong></td><td><a href="mailto:safety@aitie.app">safety@aitie.app</a></td></tr>
+            <tr><td><strong>Legal &amp; IP</strong></td><td><a href="mailto:legal@aitie.app">legal@aitie.app</a></td></tr>
+          </tbody>
+        </table>
+
+        <div class="pp-card">
+          <h3>By phone or post</h3>
+          <p><strong>Phone:</strong> Mon–Fri, 10:00–19:00 IST<br>
+          <strong>Post:</strong> Aitie Technologies Private Limited, India</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="response">
+        <h2><span class="num">02</span>What to expect</h2>
+        <table class="pp-table">
+          <thead>
+            <tr><th>Type of request</th><th>First response commitment</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>General questions and account help</td><td>Within 1 business day</td></tr>
+            <tr><td>Payment, withdrawal or escrow issues</td><td>Within 1 business day</td></tr>
+            <tr><td>Account locked out or suspected compromise</td><td>Within 4 hours during support hours</td></tr>
+            <tr><td>Disputes between a company and a professional</td><td>Acknowledged within 1 business day; resolution typically 3–5 business days</td></tr>
+            <tr><td>Privacy and data requests</td><td>Within 30 days, usually much sooner</td></tr>
+            <tr><td>Trust and safety reports</td><td>Reviewed within 24 hours</td></tr>
+          </tbody>
+        </table>
+
+        <div class="pp-callout">
+          <p><strong>To get a faster answer:</strong> Tell us your registered email or mobile number, what you were trying to do, what happened instead, and — if it helps — attach a screenshot. If your issue concerns an engagement or a payment, include the transaction or engagement reference shown in the app.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="faq">
+        <h2><span class="num">03</span>Common questions</h2>
+
+        <h3>Accounts and sign-in</h3>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">I’m not receiving my OTP.</div>
+          <div class="pp-faq-a">Check that the number or email is the one on your account, look in spam, and wait for the resend timer before trying again. SMS to Indian networks can occasionally be delayed by a few minutes. If nothing arrives after two attempts, email us and we will check delivery logs from our side.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">I’ve forgotten my password.</div>
+          <div class="pp-faq-a">Use <strong>Forgot password</strong> on the sign-in screen. You can also sign in with a verified one-time code sent to your registered email or phone number.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">Can I change my registered email or phone number?</div>
+          <div class="pp-faq-a">Yes — navigate to <strong>Settings &rarr; Profile</strong>. You will need to verify the new email or number before the change takes effect.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">Why was I signed out of all my devices?</div>
+          <div class="pp-faq-a">Signing out anywhere, changing your password, or an administrative security lock takes effect immediately on every active device. If you did not initiate any of these, reset your password and contact support immediately.</div>
+        </div>
+
+        <h3>Your Work Passport</h3>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">My CV import got things wrong.</div>
+          <div class="pp-faq-a">The import is AI-assisted and designed as a smart starting point. You can edit, reorder, or delete any entry directly. The uploaded source document itself is deleted automatically within 24 hours.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">How do I share my passport publicly?</div>
+          <div class="pp-faq-a">Turn on public sharing in your passport settings and copy your personalized link. You can switch it back to private, or regenerate the link (which immediately invalidates the old link) at any time.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">How is my Aitie Score calculated?</div>
+          <div class="pp-faq-a">The score is computed from verified records of your activity on the platform: profile completeness, proof of work, experience, and successful engagement outcomes. It is not a subjective average of user ratings. You can inspect your breakdown and recent trend in the app. Companies see only your tier label, never the exact numeric score.</div>
+        </div>
+
+        <h3>Job Pools</h3>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">My application is "pending review" — how long does that take?</div>
+          <div class="pp-faq-a">Applications are carefully reviewed by human specialists, typically within 2–3 business days. You will receive an in-app notification and email either way.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">I was rejected. Can I apply again?</div>
+          <div class="pp-faq-a">Usually yes, after a cooldown period, subject to attempt limits. The app displays the exact date when you become eligible to re-apply.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">Can I retake an assessment?</div>
+          <div class="pp-faq-a">Re-sits are allowed subject to the pool cooldown window. Your previous attempt is archived for auditing and never erased.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">I’m in a pool but not receiving invitations.</div>
+          <div class="pp-faq-a">Invitations depend on active hiring needs, skill match relevance, and ranking within the pool. Pool membership certifies eligibility but does not guarantee direct work assignment.</div>
+        </div>
+
+        <h3>Work and payment</h3>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">When do I get paid?</div>
+          <div class="pp-faq-a">When the client company approves your milestone, month, or consultation session. The funds, less the applicable platform service fee, are released to your wallet immediately upon approval.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">Approval is final — what does that mean?</div>
+          <div class="pp-faq-a">Once a company approves a milestone, the fund release completes irrevocably through the platform. If something is incomplete or requires revision, raise it with the other party <em>before</em> authorizing approval.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">Why can’t I withdraw funds?</div>
+          <div class="pp-faq-a">Common reasons include pending identity verification (KYC), incomplete payment payout setup, or funds subject to an unresolved dispute. The app specifies the exact requirement.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">Where are funds held?</div>
+          <div class="pp-faq-a">Funds are held in compliance with RBI escrow regulations by our licensed banking and payment partner Razorpay — not in a general company bank account. Your Aitie wallet reflects funds safeguarded for you until withdrawal.</div>
+        </div>
+
+        <h3>Identity verification (KYC)</h3>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">Why do you need my PAN and Aadhaar?</div>
+          <div class="pp-faq-a">Indian financial and tax regulations mandate identity verification before payouts can be issued. These details are stored in an encrypted, isolated repository and are never disclosed to clients or other professionals.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">My verification was rejected.</div>
+          <div class="pp-faq-a">The exact rejection cause is highlighted in the app — typically an unreadable photo, glare, or a name discrepancy with official government records. Simply correct and resubmit.</div>
+        </div>
+
+        <h3>Privacy and your data</h3>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">How do I get a copy of my data?</div>
+          <div class="pp-faq-a">Go to <strong>Settings &rarr; Privacy &amp; Data &rarr; Download my data</strong>. Your portable archive is generated automatically, available up to five times per day.</div>
+        </div>
+        <div class="pp-faq-item">
+          <div class="pp-faq-q">How do I delete my account?</div>
+          <div class="pp-faq-a">Visit our <a href="data-deletion.html">Delete Your Data</a> guide. Account deletion includes a 30-day grace period during which you can cancel simply by logging back in.</div>
+        </div>
+      </section>
+
+      <section class="pp-section" id="report">
+        <h2><span class="num">04</span>Reporting a problem with another user</h2>
+        <p>If someone on Aitie has behaved abusively, misrepresented their qualifications, or attempted to take an engagement off the platform, please report it immediately. Tap <strong>Report</strong> in the app on the relevant profile or conversation, or email <a href="mailto:safety@aitie.app">safety@aitie.app</a>.</p>
+        <p>Include full context, timestamps, and screenshots. Reports are reviewed by our Trust &amp; Safety team within 24 hours. We never disclose the identity of the person filing the report.</p>
+        <div class="pp-callout">
+          <p><strong>Never accept payments or work outside the platform.</strong> Moving engagements off-platform forfeits your escrow guarantee, milestone tracking, and dispute protection, and directly breaches our non-circumvention policies.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="security">
+        <h2><span class="num">05</span>Reporting a security vulnerability</h2>
+        <p>If you have identified a vulnerability or potential security concern, please inform us confidentially at <a href="mailto:security@aitie.app">security@aitie.app</a> before making any public disclosure. Include clear steps to reproduce the issue.</p>
+        <p>We commit to acknowledging your report within 2 business days and keeping you updated on remediation progress. Aitie will not pursue legal action against researchers acting in good faith without accessing or altering customer data.</p>
+      </section>
+
+      <section class="pp-section" id="app">
+        <h2><span class="num">06</span>App information</h2>
+        <table class="pp-table">
+          <tbody>
+            <tr><td><strong>Application name</strong></td><td>Aitie</td></tr>
+            <tr><td><strong>Platforms</strong></td><td>Android and iOS</td></tr>
+            <tr><td><strong>Minimum Operating System</strong></td><td>Android 8.0 (Oreo) / iOS 15.0 or later</td></tr>
+            <tr><td><strong>Availability</strong></td><td>India &nbsp;&middot;&nbsp; English &nbsp;&middot;&nbsp; INR &nbsp;&middot;&nbsp; 18+</td></tr>
+            <tr><td><strong>Permissions requested</strong></td><td>Camera and microphone (optional, only for photo/video message attachments in chat); push notifications; network access.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="pp-section" id="legal">
+        <h2><span class="num">07</span>Legal and policies</h2>
+        <ul>
+          <li><a href="privacy-policy (1).html">Privacy Policy</a> &mdash; details on data collection, processing, and DPDPA rights</li>
+          <li><a href="terms-and-conditions (1).html">Terms &amp; Conditions</a> &mdash; full contractual agreement governing platform usage</li>
+          <li><a href="data-deletion.html">Delete Your Data</a> &mdash; procedures, timelines, and account closure terms</li>
+        </ul>
+
+        <div class="pp-contact-box">
+          <span class="label">Data Protection &amp; Grievance Officer</span>
+          <span class="value">Grievance Redressal Officer, Aitie</span>
+          <span class="label">Email</span>
+          <span class="value"><a href="mailto:grievance@aitie.app">grievance@aitie.app</a></span>
+          <span class="label">Support hours</span>
+          <span class="value">Monday to Friday, 10:00 to 19:00 IST</span>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Mobile Floating Action Button -->
+  <button type="button" class="pp-mobile-fab" id="ppMobileFab" aria-label="Toggle Sections Menu">
+    <svg class="pp-fab-icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <svg class="pp-fab-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span>Sections</span>
+  </button>
+
+  <!-- Mobile Backdrop & Floating Drawer -->
+  <div class="pp-mobile-backdrop" id="ppMobileBackdrop"></div>
+  <div class="pp-mobile-drawer" id="ppMobileDrawer">
+    <div class="pp-mobile-drawer-title">Select Section</div>
+    <a href="#contact">01. How to reach us</a>
+    <a href="#response">02. What to expect</a>
+    <a href="#faq">03. Common questions</a>
+    <a href="#report">04. Reporting problems</a>
+    <a href="#security">05. Security disclosure</a>
+    <a href="#app">06. App information</a>
+    <a href="#legal">07. Legal &amp; policies</a>
+  </div>
+
+  <footer class="pp-footer">
+    &copy; <span id="ppYear"></span> <a href="/" class="pp-footer-link">Aitie</a>. All rights reserved.
+  </footer>
+</div>
+
+<script>
+document.getElementById('ppYear').textContent = new Date().getFullYear();
+
+// highlight active nav item on scroll & mobile drawer interactions
+(function(){
+  var sections = document.querySelectorAll('.pp-section');
+  var desktopLinks = document.querySelectorAll('.pp-nav a');
+  var mobileLinks  = document.querySelectorAll('.pp-mobile-drawer a');
+
+  var fab      = document.getElementById('ppMobileFab');
+  var drawer   = document.getElementById('ppMobileDrawer');
+  var backdrop = document.getElementById('ppMobileBackdrop');
+
+  function toggleMobileMenu(open) {
+    var isOpened = typeof open === 'boolean' ? open : !drawer.classList.contains('is-open');
+    drawer.classList.toggle('is-open', isOpened);
+    backdrop.classList.toggle('is-open', isOpened);
+    fab.classList.toggle('is-open', isOpened);
+  }
+
+  if (fab) {
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  }
+
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      toggleMobileMenu(false);
+    });
+  });
+
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections[0] ? sections[0].id : null;
+    sections.forEach(function(sec){
+      if (sec.offsetTop <= pos) current = sec.id;
+    });
+
+    desktopLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+    mobileLinks.forEach(function(link){
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+
+
+<script
+  src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6929b6c693cb856e01ef7c05"
+  type="text/javascript"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.schunk.36b8fb49256177c8.js"
+  type="text/javascript"
+  integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G"
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.schunk.a3cbb3185d18fbed.js"
+  type="text/javascript"
+  integrity="sha384-RfQMkUsiU/BkFuRhPHMl5vr2f8VghPtdlGoFXS4JinwDQT9H7MX5wNzEJOtPFcF7"
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.schunk.aa0a58b04bc44fad.js"
+  type="text/javascript"
+  integrity="sha384-dT168gAz/STH5p0kk9S8F2jiXMiOq6mu5HgfyRftvaany5WjueKgLnxczSVKLO1H"
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.prod.website-files.com/6929b6c693cb856e01ef7c05/js/webflow.44d68a72.d84ba9fb862d9208.js"
+  type="text/javascript"
+  integrity="sha384-Ya+MAF580jZ188jvw95g5xVhlQabU95IHSHny16T/ZD401SVr8vmb8Zl58weHSRd"
+  crossorigin="anonymous"></script>
+</body>
+</html>
