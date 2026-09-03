@@ -101,8 +101,9 @@
         '    background:rgba(255,255,255,.55);border:1px solid rgba(84,87,132,.2);color:' + ACCENT + ';text-decoration:none;}',
         '  .aitie-socials svg{width:1.1rem;height:1.1rem;}',
 
-        '  .aitie-legal{margin-top:.3rem;padding-top:1.3rem;border-top:1px solid rgba(84,87,132,.22);display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;}',
-        '  .aitie-legal a{font-family:inherit;font-size:.8rem;font-weight:500;color:rgba(26,26,46,.55);text-decoration:none;}',
+        '  .aitie-legal{margin-top:.3rem;padding-top:1.3rem;border-top:1px solid rgba(84,87,132,.22);display:flex;flex-direction:column;gap:.75rem;}',
+        '  .aitie-legal a{display:inline-block;width:max-content;font-family:inherit;font-size:.85rem;font-weight:500;color:rgba(26,26,46,.55);text-decoration:none;transition:color .2s ease;}',
+        '  .aitie-legal a:active{color:' + INK + ';}',
 
         '  body.aitie-menu-open{overflow:hidden;}',
         '}',
