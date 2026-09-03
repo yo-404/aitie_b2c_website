@@ -377,6 +377,53 @@
 				text-align: center;
 			}
 
+			/* Our Values Scroll Heading Section — matching Our Story styling */
+			.our-values-section-holder {
+				position: relative;
+				height: 180vh;
+				background: transparent !important;
+				font-family: 'Outfit', sans-serif;
+				color: #1a1a2e;
+			}
+
+			.our-values-sticky {
+				position: sticky;
+				top: 0;
+				height: 100vh;
+				height: 100dvh;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				background: transparent !important;
+			}
+
+			.our-values-moment {
+				position: absolute;
+				inset: 0;
+				z-index: 5;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 0 clamp(1.5rem, 5vw, 4rem);
+				opacity: 0;
+				transform: scale(0.94);
+				filter: blur(10px);
+				pointer-events: none;
+				transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+				            transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+				            filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+
+			.our-values-moment.is-visible {
+				opacity: 1;
+				transform: scale(1);
+				filter: blur(0);
+				pointer-events: auto;
+			}
+
 			.no-padding-bottom {
 				padding-bottom: 0 !important;
 			}
@@ -707,6 +754,9 @@
 				}
 				.our-story-section-holder {
 					height: 600vh;
+				}
+				.our-values-section-holder {
+					height: 140vh;
 				}
 				.gradient-section {
 					height: 280vh;
@@ -1114,6 +1164,15 @@
 			</div>
 		</div>
 		
+		<!-- Dedicated pinned section for Our Values heading right before Gradient Values Section -->
+		<div class="section our-values-section-holder" id="ourValuesScrollWrapper">
+			<div class="our-values-sticky">
+				<div class="our-values-moment" id="ourValuesMoment">
+					<h2 class="earn-scroll-heading">Our <span class="pink">Values</span></h2>
+				</div>
+			</div>
+		</div>
+
 		<div data-w-id="ad7ba2d4-6e2f-373f-54e4-fa67038935a8" class="section gradient-section">
 			<div class="gradient-section-image-bg">
 				<img src="images/man_desk_cutout_clean.png"
@@ -1459,6 +1518,46 @@
 							el.classList.remove('is-visible');
 						}
 					});
+				}
+
+				function onScroll() {
+					if (!ticking) {
+						window.requestAnimationFrame(update);
+						ticking = true;
+					}
+				}
+
+				window.addEventListener('scroll', onScroll, { passive: true });
+				window.addEventListener('resize', onScroll, { passive: true });
+				update();
+			})();
+		</script>
+		<script>
+			/* Our Values scroll interaction — matching Our Story heading blur fade in & out */
+			(function () {
+				var wrapper = document.getElementById('ourValuesScrollWrapper');
+				if (!wrapper) return;
+
+				var moment = document.getElementById('ourValuesMoment');
+				if (!moment) return;
+
+				var ticking = false;
+
+				function clamp(n, min, max) { return Math.max(min, Math.min(n, max)); }
+
+				function update() {
+					ticking = false;
+					var rect = wrapper.getBoundingClientRect();
+					var viewportH = window.innerHeight;
+					var scrollableHeight = wrapper.offsetHeight - viewportH;
+					if (scrollableHeight <= 0) return;
+
+					var scrolled = -rect.top;
+					var progress = clamp(scrolled / scrollableHeight, 0, 1);
+
+					// Fade in smoothly on entry, stay in focus in center, fade out before handoff to Values scroller
+					var isVisible = progress >= 0.08 && progress <= 0.88;
+					moment.classList.toggle('is-visible', isVisible);
 				}
 
 				function onScroll() {
