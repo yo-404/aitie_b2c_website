@@ -811,6 +811,10 @@
 				width: 100% !important;
 			}
 
+			.organized-mind-text {
+				padding: 0 !important;
+			}
+
 			.little-grid-text-holder .text-size-regular.text-color-dark-grey,
 			.organized-mind-text .text-size-regular.text-color-dark-grey {
 				color: #dcddf3 !important;
@@ -978,6 +982,9 @@
 				.capability-little-grid .organized-mind {
 					grid-column: span 1 !important;
 					width: 100% !important;
+				}
+				.organized-mind-text {
+					padding: 0 !important;
 				}
 				.organized-mind-images {
 					width: 100% !important;
@@ -1175,7 +1182,6 @@
 				opacity: 0;
 				filter: blur(6px);
 				transform: translateY(0.2em);
-				transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
 				will-change: opacity, filter, transform;
 			}
 
@@ -2902,24 +2908,55 @@
 							});
 						});
 
-						// Reveal the big text container as the final cards lift off, then
-						// reveal each of its 3 lines one after another in sequence.
+						// Reveal "Imagine this life." in the background right as Card 5 peels away
+						// and Card 6 ("Tomorrow, another opportunity arrives. Because of the work you did today.") is remaining.
 						if (bigText) {
 							tl.to(bigText, {
 								scale: 1,
-								duration: 1.4,
+								duration: 1.2,
 								ease: 'power2.out'
-							}, '-=1.1');
+							}, 4.0);
 						}
-						if (bigTextLines.length) {
+
+						if (bigTextLines.length >= 3) {
+							// Line 1: "Imagine this life." becomes fully visible in background while Card 6 is remaining
+							tl.to(bigTextLines[0], {
+								opacity: 1,
+								filter: 'blur(0px)',
+								y: '0em',
+								duration: 0.9,
+								ease: 'power2.out'
+							}, 4.1);
+
+							// Line 2: "Now live it on" starts to appear ONLY after the last card (Card 6) has gone completely (t = 6.0)
+							tl.to(bigTextLines[1], {
+								opacity: 1,
+								filter: 'blur(0px)',
+								y: '0em',
+								duration: 0.85,
+								ease: 'power2.out'
+							}, 6.0);
+
+							// Line 3: Aitie logo reveals after Line 2 is revealed
+							tl.to(bigTextLines[2], {
+								opacity: 1,
+								filter: 'blur(0px)',
+								y: '0em',
+								duration: 0.85,
+								ease: 'power2.out'
+							}, 6.9);
+
+							// Comfortable pause to read the full completed message
+							tl.to({}, { duration: 0.9 });
+						} else if (bigTextLines.length) {
 							bigTextLines.forEach(function (line, i) {
 								tl.to(line, {
 									opacity: 1,
 									filter: 'blur(0px)',
 									y: '0em',
-									duration: 1,
+									duration: 0.85,
 									ease: 'power2.out'
-								}, i === 0 ? '-=0.6' : '+=0.15');
+								}, i === 0 ? 4.1 : (i === 1 ? 6.0 : '+=0.2'));
 							});
 						}
 					}
