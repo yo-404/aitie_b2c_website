@@ -147,7 +147,7 @@
         + '.earn-scroll-row.is-current .earn-scroll-row-desc.is-visible,'
         + '.earn-scroll-row.is-current .earn-scroll-bottom-row.is-visible{opacity:1;transform:translateY(0);filter:blur(0);}'
         + '.earn-scroll-row-title{font-size:clamp(1.9rem, 3vw, 2.6rem);font-weight:600;line-height:1.1;color:rgba(26,26,46,.85);margin:0 0 .9rem;}'
-        + '.earn-scroll-row-desc{font-size:1.3rem;line-height:1.55;color:rgba(0,0,0,.72);max-width:32rem;margin:0 0 1.5rem;}'
+        + '.earn-scroll-row-desc{font-size:1.18rem;line-height:1.42;color:rgba(0,0,0,.72);max-width:32rem;margin:0 0 1.5rem;}'
         + '.earn-scroll-row-preview{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}'
         + '.earn-scroll-row-preview img{width:100%;height:100%;object-fit:contain;display:block;}'
         + '.earn-scroll-bottom-row{width:100%;}'
@@ -173,7 +173,7 @@
         /* Explicit order per request: heading, then the description
            text, then the image, then the short dynamic sentence. */
         + '  .earn-scroll-row-title{order:1;font-size:2.1rem;font-weight:700;color:#393a5e;}'
-        + '  .earn-scroll-row-desc{order:2;max-width:100%;}'
+        + '  .earn-scroll-row-desc{order:2;max-width:100%;font-size:1.1rem;line-height:1.38;}'
         /* Was width/height:100% against .earn-scroll-right-panel's own
            fixed box on desktop - that parent no longer sizes it
            (display:contents above), so it needs its own explicit box

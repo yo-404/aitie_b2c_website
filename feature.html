@@ -119,6 +119,66 @@
 				display: none !important;
 			}
 
+			.about-button-holder {
+				margin-top: 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+			}
+
+			.hero-waitlist-btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.65rem;
+				background: #393a5e;
+				color: #ffffff !important;
+				font-family: 'Outfit', sans-serif !important;
+				font-size: 1.08rem;
+				font-weight: 700;
+				padding: 0.95rem 2.25rem;
+				border-radius: 999px;
+				text-decoration: none;
+				box-shadow: 0 10px 25px rgba(57, 58, 94, 0.28);
+				transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+				cursor: pointer;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+			}
+
+			.hero-waitlist-btn:hover {
+				background: #46486e;
+				transform: translateY(-2px);
+				box-shadow: 0 14px 28px rgba(57, 58, 94, 0.38);
+				color: #ffffff !important;
+			}
+
+			.hero-waitlist-btn:active {
+				transform: translateY(0) scale(0.98);
+			}
+
+			.hero-waitlist-btn svg {
+				width: 1.15rem;
+				height: 1.15rem;
+				stroke: #ffffff;
+				transition: transform 0.25s ease;
+			}
+
+			.hero-waitlist-btn:hover svg {
+				transform: translateX(3px);
+			}
+
+			@media screen and (max-width: 767px) {
+				.about-button-holder {
+					justify-content: center;
+					width: 100%;
+					margin-top: 1rem;
+				}
+				.hero-waitlist-btn {
+					padding: 0.85rem 2rem;
+					font-size: 1rem;
+				}
+			}
+
 			html {
 				background-image: linear-gradient(45deg, var(--color-1), var(--color-2)) !important;
 				background-repeat: no-repeat !important;
@@ -1374,19 +1434,11 @@
 										</div>
 									</div>
 									<div class="about-button-holder">
-							<!-- App Store Button -->
-							<div class="big-button-holder">
-								<a href="waitlist.html" class="big-button w-inline-block">
-									<img src="images/appleplay.png" loading="lazy" alt="Download on the App Store" />
-								</a>
-							</div>
-							<!-- Google Play Button -->
-							<div class="big-button-holder">
-								<a href="waitlist.html" class="big-button w-inline-block">
-									<img src="images/googleplay.png" loading="lazy" alt="Get it on Google Play" />
-								</a>
-							</div>
-						</div>
+										<a href="waitlist.html" class="hero-waitlist-btn">
+											<span>Join Waitlist</span>
+											<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+										</a>
+									</div>
 						<div
 							data-w-id="8a62a9ea-ddcd-aab7-06ec-6f27ee148343"
 							class="div-block-3">
