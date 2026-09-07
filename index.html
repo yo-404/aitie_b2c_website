@@ -263,6 +263,10 @@
    256px at 320px), so it doesn't need a clamp() ceiling the way the
    hero heading did. */
 @media screen and (max-width: 767px) {
+  .section.no-writing {
+    height: 420vh !important;
+  }
+
   .big-gradient-text {
     font-size: 19vw !important;
   }
@@ -294,14 +298,32 @@
      this used to be) keeps the text and image close together as one
      group AND flush against the bottom of the viewport, so the image
      itself touches the bottom edge with no leftover gap below it. */
+  .sticky-no-writing .gradient-grid,
   .no-writing .gradient-grid {
     justify-content: flex-end !important;
     grid-row-gap: 3.5rem;
     row-gap: 3.5rem;
   }
 
+  /* Stacks "Applying", "Chasing", and "Monotony" in the exact same
+     single-cell slot right below "No", eliminating vertical shifts and
+     removing the empty gaps from subsequent word lines. */
   .gradient-grid-item.hide-on-desktop {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr !important;
+    position: relative !important;
     padding-bottom: 1.5rem;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .gradient-grid-item.hide-on-desktop > .big-gradient-text {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 / -1 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    width: 100%;
   }
 }
 
@@ -1113,9 +1135,9 @@ img.gradient-section-image {
 
     <meta charset="utf-8" />
     <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous" />
-    <title>Aitie — for Independent Workforce </title>
+    <title>Aitie - for Independent Workforce </title>
     <meta name="description" content="Join Aitie, the all-in-one platform built for independent professionals, creators, and agile teams to collaborate, manage projects, and get paid." />
-    <meta property="og:title" content="Aitie — For The Independent Workforce" />
+    <meta property="og:title" content="Aitie - For The Independent Workforce" />
     <meta property="og:description" content="Join Aitie, the all-in-one platform built for independent professionals, creators, and agile teams to collaborate, manage projects, and get paid." />
     <meta property="og:image" content="images/og-image/home-meta.png" />
     <meta name="twitter:title" content="Aitie — The Operating System for Independent Work &amp; Creators" />
@@ -1836,7 +1858,7 @@ img.gradient-section-image {
             <div class="padding-section-medium">
                 <div class="center-text-holder">
                     <div class="fade-in-move-on-scroll">
-                        <h1 class="big-text">Is this <span class="pink">you</span>?</h1>
+                        <h1 class="big-text">Is this <span class="pink">you?</span></h1>
                     </div>
                 </div>
 

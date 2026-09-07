@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join the Waitlist — Get Early Access to Aitie</title>
+<title>Join the Waitlist - Get Early Access to Aitie</title>
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 <meta name="description" content="Be among the first to experience Aitie. Sign up for early access to unlock smart independent work." />
 <meta property="og:title" content="Join the Waitlist — Get Early Access to Aitie" />
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var errorEl    = document.getElementById('waitlist-error');
   var successEl  = document.getElementById('waitlist-success');
 
-  var WEBHOOK_URL = 'https://n8n.srv775902.hstgr.cloud/webhook/6aa82dc4-f9d0-4fb2-89e5-ae34313e6340';
+  var WEBHOOK_URL = 'https://akm562.app.n8n.cloud/webhook/waitlist-form';
 
   /* ---------- intro reveal ---------- */
   var revealed = false;
@@ -514,11 +514,19 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.style.opacity = '0.6';
 
     try {
-      await fetch(WEBHOOK_URL, {
+      var res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, email: email }),
+        body: JSON.stringify({
+          formType: 'waitlist',
+          name: name,
+          email: email
+        }),
       });
+
+      if (!res.ok) {
+        throw new Error('Server returned status: ' + res.status);
+      }
 
       // Success — fade the form out and bring up the full-screen "You're in." state
       shell.classList.add('is-fading-out');
