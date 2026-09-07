@@ -10,7 +10,7 @@
 			href="https://cdn.prod.website-files.com"
 			rel="preconnect"
 			crossorigin="anonymous" />
-		<title>Features &amp; Tools — Built for the Next Gen of Work | Aitie</title>
+		<title>Features &amp; Tools - Built for the Next Gen of Work | Aitie</title>
 		<meta name="description" content="Discover Aitie's smart tools: verified talent matching, secure escrow payouts, and real-time collaboration." />
 		<meta property="og:title" content="Features &amp; Tools — Built for the Next Gen of Work | Aitie" />
 		<meta property="og:description" content="Discover Aitie's smart tools: verified talent matching, secure escrow payouts, and real-time collaboration." />
@@ -109,6 +109,17 @@
 				-moz-osx-font-smoothing: grayscale;
 			}
 
+			@media screen and (min-width: 768px) {
+				h1, h2, h3, h4, h5, h6,
+				.heading-style-h1, .heading-style-h2, .heading-style-h3, .heading-style-h4, .heading-style-h5, .heading-style-h6,
+				.blog-title,
+				.big-text-on-gradient,
+				[class*="heading-style-"],
+				[class*="heading"] {
+					letter-spacing: -0.035em;
+				}
+			}
+
 			h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
 			[class*="heading-style-"] *,
 			[class*="heading"] * {
@@ -117,6 +128,66 @@
 
 			.w-webflow-badge {
 				display: none !important;
+			}
+
+			.about-button-holder {
+				margin-top: 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+			}
+
+			.hero-waitlist-btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.65rem;
+				background: #393a5e;
+				color: #ffffff !important;
+				font-family: 'Outfit', sans-serif !important;
+				font-size: 1.08rem;
+				font-weight: 700;
+				padding: 0.95rem 2.25rem;
+				border-radius: 999px;
+				text-decoration: none;
+				box-shadow: 0 10px 25px rgba(57, 58, 94, 0.28);
+				transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+				cursor: pointer;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+			}
+
+			.hero-waitlist-btn:hover {
+				background: #46486e;
+				transform: translateY(-2px);
+				box-shadow: 0 14px 28px rgba(57, 58, 94, 0.38);
+				color: #ffffff !important;
+			}
+
+			.hero-waitlist-btn:active {
+				transform: translateY(0) scale(0.98);
+			}
+
+			.hero-waitlist-btn svg {
+				width: 1.15rem;
+				height: 1.15rem;
+				stroke: #ffffff;
+				transition: transform 0.25s ease;
+			}
+
+			.hero-waitlist-btn:hover svg {
+				transform: translateX(3px);
+			}
+
+			@media screen and (max-width: 767px) {
+				.about-button-holder {
+					justify-content: center;
+					width: 100%;
+					margin-top: 1rem;
+				}
+				.hero-waitlist-btn {
+					padding: 0.85rem 2rem;
+					font-size: 1rem;
+				}
 			}
 
 			html {
@@ -163,7 +234,7 @@
 				font-size: clamp(3.4rem, 7vw, 5.6rem) !important;
 				font-weight: 800 !important;
 				line-height: 1.12 !important;
-				letter-spacing: -0.02em !important;
+				letter-spacing: -0.035em !important;
 				text-align: center !important;
 				margin: 0 !important;
 			}
@@ -579,7 +650,7 @@
 				font-size: clamp(1.85rem, 2.7vw, 2.45rem) !important;
 				font-weight: 800 !important;
 				line-height: 1.15 !important;
-				letter-spacing: -0.02em !important;
+				letter-spacing: -0.035em !important;
 				margin-bottom: 0 !important;
 			}
 
@@ -680,6 +751,7 @@
 				font-size: clamp(2.3rem, 3.8vw, 2.2rem) !important;
 				line-height: 1.15 !important;
 				font-weight: 800 !important;
+				letter-spacing: -0.03em !important;
 				text-align: center !important;
 				padding: 0 !important;
 				margin: 0 !important;
@@ -689,6 +761,7 @@
 
 			.organized-mind .little-grid-title-overlay .heading-style-h4 {
 				font-size: clamp(2.5rem, 4.2vw, 2.6rem) !important;
+				letter-spacing: -0.03em !important;
 			}
 
 			/* Phase 1: card enters showing ONLY the overlay's giant
@@ -740,6 +813,7 @@
 				font-size: clamp(1.4rem, 2.1vw, 1.8rem) !important;
 				line-height: 1.25 !important;
 				font-weight: 700 !important;
+				letter-spacing: -0.025em !important;
 				text-align: left !important;
 				padding: 0 !important;
 				margin: 0 0 0.65rem 0 !important;
@@ -749,6 +823,10 @@
 			.organized-mind-holder {
 				display: grid !important;
 				width: 100% !important;
+			}
+
+			.organized-mind-text {
+				padding: 0 !important;
 			}
 
 			.little-grid-text-holder .text-size-regular.text-color-dark-grey,
@@ -918,6 +996,9 @@
 				.capability-little-grid .organized-mind {
 					grid-column: span 1 !important;
 					width: 100% !important;
+				}
+				.organized-mind-text {
+					padding: 0 !important;
 				}
 				.organized-mind-images {
 					width: 100% !important;
@@ -1108,14 +1189,13 @@
 				line-height: 1.14 !important;
 				font-weight: 400 !important;
 				text-align: center !important;
-				letter-spacing: -0.02em;
+				letter-spacing: -0.035em !important;
 			}
 
 			.big-text-line {
 				opacity: 0;
 				filter: blur(6px);
 				transform: translateY(0.2em);
-				transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
 				will-change: opacity, filter, transform;
 			}
 
@@ -1156,7 +1236,7 @@
 				line-height: 1.35 !important;
 				font-weight: 600 !important;
 				color: #EDEAFB !important;
-				letter-spacing: -0.02em !important;
+				letter-spacing: -0.035em !important;
 				margin: 0 !important;
 				text-align: center !important;
 			}
@@ -1374,19 +1454,11 @@
 										</div>
 									</div>
 									<div class="about-button-holder">
-							<!-- App Store Button -->
-							<div class="big-button-holder">
-								<a href="waitlist.html" class="big-button w-inline-block">
-									<img src="images/appleplay.png" loading="lazy" alt="Download on the App Store" />
-								</a>
-							</div>
-							<!-- Google Play Button -->
-							<div class="big-button-holder">
-								<a href="waitlist.html" class="big-button w-inline-block">
-									<img src="images/googleplay.png" loading="lazy" alt="Get it on Google Play" />
-								</a>
-							</div>
-						</div>
+										<a href="waitlist.html" class="hero-waitlist-btn">
+											<span>Join Waitlist</span>
+											<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+										</a>
+									</div>
 						<div
 							data-w-id="8a62a9ea-ddcd-aab7-06ec-6f27ee148343"
 							class="div-block-3">
@@ -2850,24 +2922,55 @@
 							});
 						});
 
-						// Reveal the big text container as the final cards lift off, then
-						// reveal each of its 3 lines one after another in sequence.
+						// Reveal "Imagine this life." in the background right as Card 5 peels away
+						// and Card 6 ("Tomorrow, another opportunity arrives. Because of the work you did today.") is remaining.
 						if (bigText) {
 							tl.to(bigText, {
 								scale: 1,
-								duration: 1.4,
+								duration: 1.2,
 								ease: 'power2.out'
-							}, '-=1.1');
+							}, 4.0);
 						}
-						if (bigTextLines.length) {
+
+						if (bigTextLines.length >= 3) {
+							// Line 1: "Imagine this life." becomes fully visible in background while Card 6 is remaining
+							tl.to(bigTextLines[0], {
+								opacity: 1,
+								filter: 'blur(0px)',
+								y: '0em',
+								duration: 0.9,
+								ease: 'power2.out'
+							}, 4.1);
+
+							// Line 2: "Now live it on" starts to appear ONLY after the last card (Card 6) has gone completely (t = 6.0)
+							tl.to(bigTextLines[1], {
+								opacity: 1,
+								filter: 'blur(0px)',
+								y: '0em',
+								duration: 0.85,
+								ease: 'power2.out'
+							}, 6.0);
+
+							// Line 3: Aitie logo reveals after Line 2 is revealed
+							tl.to(bigTextLines[2], {
+								opacity: 1,
+								filter: 'blur(0px)',
+								y: '0em',
+								duration: 0.85,
+								ease: 'power2.out'
+							}, 6.9);
+
+							// Comfortable pause to read the full completed message
+							tl.to({}, { duration: 0.9 });
+						} else if (bigTextLines.length) {
 							bigTextLines.forEach(function (line, i) {
 								tl.to(line, {
 									opacity: 1,
 									filter: 'blur(0px)',
 									y: '0em',
-									duration: 1,
+									duration: 0.85,
 									ease: 'power2.out'
-								}, i === 0 ? '-=0.6' : '+=0.15');
+								}, i === 0 ? 4.1 : (i === 1 ? 6.0 : '+=0.2'));
 							});
 						}
 					}

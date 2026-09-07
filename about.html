@@ -10,7 +10,7 @@
 			href="https://cdn.prod.website-files.com"
 			rel="preconnect"
 			crossorigin="anonymous" />
-		<title>About Us — Putting Independent Talent First | Aitie</title>
+		<title>About Us - Putting Independent Talent First | Aitie</title>
 		<meta name="description" content="Learn about Aitie's mission to empower the independent workforce. We build workforce-first tools that put talent and creators before platforms." />
 		<meta property="og:title" content="About Us — Putting Independent Talent First | Aitie" />
 		<meta property="og:description" content="Learn about Aitie's mission to empower the independent workforce. We build workforce-first tools that put talent and creators before platforms." />
@@ -101,6 +101,17 @@
 				-moz-osx-font-smoothing: grayscale;
 			}
 
+			@media screen and (min-width: 768px) {
+				h1, h2, h3, h4, h5, h6,
+				.heading-style-h1, .heading-style-h2, .heading-style-h3, .heading-style-h4, .heading-style-h5, .heading-style-h6,
+				.blog-title,
+				.big-text-on-gradient,
+				[class*="heading-style-"],
+				[class*="heading"] {
+					letter-spacing: -0.035em;
+				}
+			}
+
 			h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
 			[class*="heading-style-"] *,
 			[class*="heading"] * {
@@ -167,7 +178,7 @@
 				font-size: clamp(3.4rem, 7vw, 5.6rem) !important;
 				font-weight: 800 !important;
 				line-height: 1.12 !important;
-				letter-spacing: -0.02em !important;
+				letter-spacing: -0.035em !important;
 				text-align: center !important;
 				margin: 0 !important;
 			}
@@ -298,7 +309,7 @@
 			.approach-statement-text {
 				font-size: clamp(1.75rem, 3.4vw, 2.75rem);
 				font-weight: 500;
-				line-height: 1.55;
+				line-height: 1.4;
 				color: rgba(26, 26, 46, 0.88) !important;
 				max-width: 58rem;
 				margin: 0 auto;
@@ -308,7 +319,7 @@
 			/* Our Story Scroll Presentation — matching earnScrollWrapper in index_pink.html */
 			.our-story-section-holder {
 				position: relative;
-				height: 800vh;
+				height: 900vh;
 				background: transparent !important;
 				font-family: 'Outfit', sans-serif;
 				color: #1a1a2e;
@@ -356,7 +367,7 @@
 				font-size: clamp(3.2rem, 6.5vw, 5.2rem);
 				font-weight: 700;
 				line-height: 1.15;
-				letter-spacing: -0.02em;
+				letter-spacing: -0.035em !important;
 				color: #1a1a2e !important;
 				max-width: 52rem;
 				margin: 0 auto;
@@ -368,13 +379,68 @@
 			}
 
 			.earn-scroll-subtext {
-				font-size: clamp(1.65rem, 3.2vw, 2.65rem);
+				font-size: clamp(1.45rem, 2.5vw, 2.25rem);
 				font-weight: 500;
-				line-height: 1.55;
+				line-height: 1.4;
 				color: rgba(26, 26, 46, 0.88) !important;
-				max-width: 58rem;
+				max-width: 48rem;
 				margin: 0 auto;
 				text-align: center;
+			}
+
+			@media screen and (max-width: 767px) {
+				.earn-scroll-subtext {
+					font-size: 1.25rem !important;
+					line-height: 1.38 !important;
+					max-width: 90vw !important;
+				}
+			}
+
+			/* Our Values Scroll Heading Section — matching Our Story styling */
+			.our-values-section-holder {
+				position: relative;
+				height: 180vh;
+				background: transparent !important;
+				font-family: 'Outfit', sans-serif;
+				color: #1a1a2e;
+			}
+
+			.our-values-sticky {
+				position: sticky;
+				top: 0;
+				height: 100vh;
+				height: 100dvh;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				background: transparent !important;
+			}
+
+			.our-values-moment {
+				position: absolute;
+				inset: 0;
+				z-index: 5;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 0 clamp(1.5rem, 5vw, 4rem);
+				opacity: 0;
+				transform: scale(0.94);
+				filter: blur(10px);
+				pointer-events: none;
+				transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+				            transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+				            filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+
+			.our-values-moment.is-visible {
+				opacity: 1;
+				transform: scale(1);
+				filter: blur(0);
+				pointer-events: auto;
 			}
 
 			.no-padding-bottom {
@@ -531,7 +597,7 @@
 					text-transform: lowercase;
 					font-size: clamp(1.75rem, 2.6vw, 2.85rem);
 					color: #1a1a2e;
-					letter-spacing: -0.01em;
+					letter-spacing: -0.03em;
 				}
 
 				.mobile-split-bold {
@@ -540,7 +606,7 @@
 					font-weight: 600;
 					text-transform: uppercase;
 					color: #1a1a2e;
-					letter-spacing: -0.01em;
+					letter-spacing: -0.03em;
 				}
 			}
 
@@ -708,6 +774,9 @@
 				.our-story-section-holder {
 					height: 600vh;
 				}
+				.our-values-section-holder {
+					height: 140vh;
+				}
 				.gradient-section {
 					height: 280vh;
 				}
@@ -761,6 +830,14 @@
 					top: auto !important;
 					margin-top: 0 !important;
 				}
+				.earn-scroll-subtext {
+					font-size: 24px !important;
+					line-height: 1.4 !important;
+				}
+				.approach-statement-text {
+					font-size: 24px !important;
+					line-height: 1.4 !important;
+				}
 			}
 
 			@media screen and (max-width: 479px) {
@@ -788,6 +865,14 @@
 					bottom: -125% !important;
 					right: 2% !important;
 					margin-top: 0 !important;
+				}
+				.earn-scroll-subtext {
+					font-size: 24px !important;
+					line-height: 1.4 !important;
+				}
+				.approach-statement-text {
+					font-size: 24px !important;
+					line-height: 1.4 !important;
 				}
 			}
 
@@ -1056,35 +1141,45 @@
 					<h2 class="earn-scroll-heading">Our <span class="pink">Story</span></h2>
 				</div>
 
-				<!-- Step 1 to 7: Story Bits Moments -->
+				<!-- Step 1 to 8: Story Bits Moments -->
 				<div class="our-story-moment our-story-bit" data-step="1">
 					<p class="earn-scroll-subtext">
 						We started with a simple observation: the best talent was already choosing
-						independence, on purpose. 53% of Gen Z already work independently. More
-						importantly, 45% of high-growth companies now build independent talent
-						into their core teams, and 65% of global leaders plan to open their doors even
-						wider.
+						independence, on purpose. 53% of Gen Z already work independently.
 					</p>
 				</div>
 
 				<div class="our-story-moment our-story-bit" data-step="2">
 					<p class="earn-scroll-subtext">
-						Even though India already had the largest independent workforce in the
-						world, over 15 million strong, there was still no real system for them.
+						More importantly, 45% of high-growth companies now build independent talent
+						into their core teams, and 65% of global leaders plan to open their doors even
+						wider.
 					</p>
 				</div>
 
 				<div class="our-story-moment our-story-bit" data-step="3">
 					<p class="earn-scroll-subtext">
-						And this wasn't a small shift happening on the side. By mid-2025, 36.3% of
-						new startups were solo-founded, entire companies now run almost
-						completely on independent talent: design here, development there, legal
-						somewhere else, no single team under one roof. We know, because that's
-						exactly how Aitie itself came together.
+						Even though India already had the largest independent workforce in the
+						world, over 15 million strong, there was still no real system for them.
+						And this wasn't a small shift happening on the side.
 					</p>
 				</div>
 
 				<div class="our-story-moment our-story-bit" data-step="4">
+					<p class="earn-scroll-subtext">
+						By mid-2025, 36.3% of new startups were solo-founded, entire companies now run
+						almost completely on independent talent.
+					</p>
+				</div>
+
+				<div class="our-story-moment our-story-bit" data-step="5">
+					<p class="earn-scroll-subtext">
+						Design here, development there, legal somewhere else, no single team under one
+						roof. We know, because that's exactly how Aitie itself came together.
+					</p>
+				</div>
+
+				<div class="our-story-moment our-story-bit" data-step="6">
 					<p class="earn-scroll-subtext">
 						And yet, every platform built for this world was built for the client first. The
 						professional was always the one adjusting, the one proving, the one waiting
@@ -1092,28 +1187,32 @@
 					</p>
 				</div>
 
-				<div class="our-story-moment our-story-bit" data-step="5">
+				<div class="our-story-moment our-story-bit" data-step="7">
 					<p class="earn-scroll-subtext">
 						We wanted to build something different: an app built for the workforce first,
 						where every feature exists to make their life easier, not just the client’s.
 					</p>
 				</div>
 
-				<div class="our-story-moment our-story-bit" data-step="6">
+				<div class="our-story-moment our-story-bit" data-step="8">
 					<p class="earn-scroll-subtext">
-						So that's what we set out to build with Aitie.
-					</p>
-				</div>
-
-				<div class="our-story-moment our-story-bit" data-step="7">
-					<p class="earn-scroll-subtext">
-						Companies noticed the shift too, and wanted a way in. That became Aitie
-						Edge, built on the same trust, just from the other side of the table.
+						So that's what we set out to build with Aitie. Companies noticed the shift too,
+						and wanted a way in. That became Aitie Edge, built on the same trust, just from
+						the other side of the table.
 					</p>
 				</div>
 			</div>
 		</div>
 		
+		<!-- Dedicated pinned section for Our Values heading right before Gradient Values Section -->
+		<div class="section our-values-section-holder" id="ourValuesScrollWrapper">
+			<div class="our-values-sticky">
+				<div class="our-values-moment" id="ourValuesMoment">
+					<h2 class="earn-scroll-heading">Our <span class="pink">Values</span></h2>
+				</div>
+			</div>
+		</div>
+
 		<div data-w-id="ad7ba2d4-6e2f-373f-54e4-fa67038935a8" class="section gradient-section">
 			<div class="gradient-section-image-bg">
 				<img src="images/man_desk_cutout_clean.png"
@@ -1437,9 +1536,9 @@
 					var scrolled = -rect.top;
 					var progress = clamp(scrolled / scrollableDist, 0, 1);
 
-					// Cutout background image: smooth fade in on entry and fade out on exit
+					// Cutout background image: smooth fade in on entry, no fade effect when section scrolls away
 					if (bgImage) {
-						var imgVisible = progress > 0.015 && progress < 0.90;
+						var imgVisible = progress > 0.015;
 						bgImage.classList.toggle('is-visible', imgVisible);
 					}
 
@@ -1453,12 +1552,54 @@
 					holders.forEach(function (el, idx) {
 						if (!el) return;
 						if (stepFloor === idx) {
-							var isVisible = stepFrac > ENTER_AT && stepFrac <= EXIT_AT;
+							var isVisible = (idx === TOTAL - 1)
+								? stepFrac > ENTER_AT
+								: (stepFrac > ENTER_AT && stepFrac <= EXIT_AT);
 							el.classList.toggle('is-visible', isVisible);
 						} else {
 							el.classList.remove('is-visible');
 						}
 					});
+				}
+
+				function onScroll() {
+					if (!ticking) {
+						window.requestAnimationFrame(update);
+						ticking = true;
+					}
+				}
+
+				window.addEventListener('scroll', onScroll, { passive: true });
+				window.addEventListener('resize', onScroll, { passive: true });
+				update();
+			})();
+		</script>
+		<script>
+			/* Our Values scroll interaction — matching Our Story heading blur fade in & out */
+			(function () {
+				var wrapper = document.getElementById('ourValuesScrollWrapper');
+				if (!wrapper) return;
+
+				var moment = document.getElementById('ourValuesMoment');
+				if (!moment) return;
+
+				var ticking = false;
+
+				function clamp(n, min, max) { return Math.max(min, Math.min(n, max)); }
+
+				function update() {
+					ticking = false;
+					var rect = wrapper.getBoundingClientRect();
+					var viewportH = window.innerHeight;
+					var scrollableHeight = wrapper.offsetHeight - viewportH;
+					if (scrollableHeight <= 0) return;
+
+					var scrolled = -rect.top;
+					var progress = clamp(scrolled / scrollableHeight, 0, 1);
+
+					// Fade in smoothly on entry, stay in focus in center, fade out before handoff to Values scroller
+					var isVisible = progress >= 0.08 && progress <= 0.88;
+					moment.classList.toggle('is-visible', isVisible);
 				}
 
 				function onScroll() {

@@ -46,6 +46,8 @@
         // own IX2 opacity animation on the heading holders inside it.
         + '.gradient-section{transition:opacity .4s ease, filter .4s ease;}'
         + '.gradient-section.is-prev-fading{opacity:0;filter:blur(14px);}'
+        + '.cta_wrapper{transition:opacity .4s ease, filter .4s ease;}'
+        + '.cta_wrapper.is-exit-fading{opacity:0;filter:blur(14px);}'
 
         // --- pin scaffold for .cta_wrapper, same shape as the other
         // scroll sections' own wrapper/section split ---
@@ -142,12 +144,12 @@
         var scrolledIntoSection = -rect.top;
         var sectionProgress = clamp(scrolledIntoSection / totalScrollable, 0, 1);
 
-        // Fade over the last 12% of the section's own pinned scroll
-        // range, finishing at 92% - comfortably before 100% (the exact
-        // sticky-release point), so the element is already invisible by
-        // the time it would start moving.
-        var FADE_START = 0.80;
-        var FADE_END   = 0.92;
+        // Fade at the very end of the section's own pinned scroll
+        // range (after heading 4 has had its full display time), finishing
+        // at 99% - right before 100% (the sticky-release point), so the
+        // element is already invisible by the time it would start moving.
+        var FADE_START = 0.94;
+        var FADE_END   = 0.99;
         var raw = clamp((sectionProgress - FADE_START) / (FADE_END - FADE_START), 0, 1);
 
         prevSection.classList.toggle('is-prev-fading', raw > 0.05);
@@ -192,6 +194,21 @@
             rows.forEach(function (row, i) {
                 row.classList.toggle('is-visible', i < activeCount);
             });
+        }
+
+        // Exit fade for this section so the next section (.section.no-writing)
+        // blurs/fades in calmly without abrupt handoff
+        var EXIT_FADE_START = 0.86;
+        var EXIT_FADE_END   = 0.98;
+        if (progress > EXIT_FADE_START) {
+            var exitRaw = clamp((progress - EXIT_FADE_START) / (EXIT_FADE_END - EXIT_FADE_START), 0, 1);
+            wrapper.classList.toggle('is-exit-fading', exitRaw > 0.05);
+            wrapper.style.opacity = String(1 - exitRaw);
+            wrapper.style.filter = 'blur(' + (exitRaw * 14) + 'px)';
+        } else {
+            wrapper.classList.remove('is-exit-fading');
+            wrapper.style.opacity = '';
+            wrapper.style.filter = '';
         }
     }
 
