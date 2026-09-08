@@ -442,7 +442,57 @@ document.addEventListener('DOMContentLoaded', function () {
   var errorEl    = document.getElementById('waitlist-error');
   var successEl  = document.getElementById('waitlist-success');
 
-  var WEBHOOK_URL = 'https://akm562.app.n8n.cloud/webhook/waitlist-form';
+  var WEBHOOK_URL = 'https://n8n.srv775902.hstgr.cloud/webhook/waitlist-form';
+
+  /* ---------- marketing attribution (UTM params) ----------
+     Read on load. First-touch UTMs are stored in localStorage so they survive
+     internal navigation before the user submits; a param present in the
+     current URL always overrides the stored value. */
+  var MKT_STORE_KEY = 'aitie_mkt_attribution';
+  var MKT_KEYS = ['utm_source', 'utm_medium', 'utm_term', 'utm_content', 'utm_id'];
+
+  function readMarketingParams() {
+    var params;
+    try { params = new URLSearchParams(window.location.search); }
+    catch (e) { params = null; }
+
+    var current = {};
+    if (params) {
+      MKT_KEYS.forEach(function (k) {
+        var v = params.get(k);
+        if (v) current[k] = v.slice(0, 512);
+      });
+    }
+
+    var stored = {};
+    try {
+      var raw = window.localStorage.getItem(MKT_STORE_KEY);
+      if (raw) stored = JSON.parse(raw) || {};
+    } catch (e) { stored = {}; }
+
+    var merged = {};
+    MKT_KEYS.forEach(function (k) {
+      if (current[k]) merged[k] = current[k];
+      else if (stored[k]) merged[k] = stored[k];
+    });
+
+    try {
+      if (Object.keys(merged).length) {
+        window.localStorage.setItem(MKT_STORE_KEY, JSON.stringify(merged));
+      }
+    } catch (e) {}
+
+    return merged;
+  }
+
+  var MARKETING = readMarketingParams();
+
+  function getAttributionPayload() {
+    var attribution = {};
+    Object.keys(MARKETING).forEach(function (k) { attribution[k] = MARKETING[k]; });
+    attribution.page_url = window.location.href;
+    return attribution;
+  }
 
   /* ---------- intro reveal ---------- */
   var revealed = false;
@@ -514,14 +564,18 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.style.opacity = '0.6';
 
     try {
+      var attribution = getAttributionPayload();
+
       var res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+        body: JSON.stringify(Object.assign({
           formType: 'waitlist',
           name: name,
-          email: email
-        }),
+          email: email,
+          submitted_at: new Date().toISOString(),
+          attribution: attribution
+        }, attribution)),  // also flattened: utm_source, utm_medium, ..., page_url
       });
 
       if (!res.ok) {
