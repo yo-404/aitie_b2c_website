@@ -801,7 +801,79 @@ document.addEventListener('DOMContentLoaded', function () {
   var errorEl      = document.getElementById('contact-error');
   var successEl    = document.getElementById('contact-success');
 
-  var WEBHOOK_URL = 'https://akm562.app.n8n.cloud/webhook/waitlist-form';
+  var WEBHOOK_URL = 'https://n8n.srv775902.hstgr.cloud/webhook/c5c80f77-8357-4557-bf80-972eff5e202f';
+
+  /* ---------- marketing attribution (UTM / click IDs / referrer) ----------
+     Captured on page load. First-touch UTMs are persisted to localStorage so
+     they survive internal navigation before the user actually submits; the
+     current URL's params always win when present (last non-empty value).     */
+  var MKT_STORE_KEY = 'aitie_mkt_attribution';
+
+  function readMarketingParams() {
+    var params;
+    try { params = new URLSearchParams(window.location.search); }
+    catch (e) { params = null; }
+
+    var keys = [
+      'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
+      'utm_id', 'utm_source_platform', 'utm_creative_format', 'utm_marketing_tactic',
+      'gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid', 'ttclid', 'li_fat_id',
+      'ref', 'referral_code', 'campaign_id', 'ad_id', 'adset_id'
+    ];
+
+    var current = {};
+    if (params) {
+      keys.forEach(function (k) {
+        var v = params.get(k);
+        if (v) current[k] = v.slice(0, 512);
+      });
+    }
+
+    // merge with stored first-touch values (stored wins only where current is absent)
+    var stored = {};
+    try {
+      var raw = window.localStorage.getItem(MKT_STORE_KEY);
+      if (raw) stored = JSON.parse(raw) || {};
+    } catch (e) { stored = {}; }
+
+    var merged = {};
+    keys.forEach(function (k) {
+      if (current[k]) merged[k] = current[k];
+      else if (stored[k]) merged[k] = stored[k];
+    });
+
+    // persist the merged set (first-touch retained, new params added)
+    try {
+      if (Object.keys(merged).length) {
+        window.localStorage.setItem(MKT_STORE_KEY, JSON.stringify(merged));
+      }
+    } catch (e) {}
+
+    return merged;
+  }
+
+  var MARKETING = readMarketingParams();
+
+  function getAttributionPayload() {
+    var attribution = {};
+    // spread captured params into the payload
+    Object.keys(MARKETING).forEach(function (k) { attribution[k] = MARKETING[k]; });
+
+    // always-available context
+    attribution.page_url = window.location.href;
+    attribution.page_path = window.location.pathname;
+    attribution.referrer = document.referrer || null;
+
+    var storedLanding = null;
+    try { storedLanding = window.localStorage.getItem('aitie_landing_page'); } catch (e) {}
+    if (!storedLanding) {
+      storedLanding = window.location.href;
+      try { window.localStorage.setItem('aitie_landing_page', storedLanding); } catch (e) {}
+    }
+    attribution.landing_page = storedLanding;
+
+    return attribution;
+  }
 
   /* ---------- scene transition ----------
      Desktop: both scenes are sticky-pinned to the same viewport spot; scrolling
@@ -983,16 +1055,21 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.style.opacity = '0.6';
 
     try {
+      var attribution = getAttributionPayload();
+
       var res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+        body: JSON.stringify(Object.assign({
           formType: 'contact',
           name: name,
           email: email,
           subject: subject,
-          message: message
-        }),
+          message: message,
+          submitted_at: new Date().toISOString(),
+          // nested object for consumers that want it grouped
+          attribution: attribution
+        }, attribution)),  // also flattened top-level (utm_source, gclid, ...)
       });
 
       if (!res.ok) {
