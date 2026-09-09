@@ -17,6 +17,18 @@
    file:// document in places, where fetching a local file is blocked by
    CORS; a single <script src="preloader.js"> has no such restriction. */
 (function () {
+    // Check sessionStorage so returning to the home page during the same
+    // browser session does not re-trigger the preloader intro sequence.
+    try {
+        if (sessionStorage.getItem('aitie_home_intro_seen') || sessionStorage.getItem('home_intro_seen')) {
+            return;
+        }
+        sessionStorage.setItem('aitie_home_intro_seen', 'true');
+        sessionStorage.setItem('home_intro_seen', 'true');
+    } catch (e) {
+        // Continue normally if sessionStorage is restricted by browser security/privacy settings
+    }
+
     var css = '.page-preloader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#0c0d1a;}' +
         '.preloader-logo{width:min(60vw,420px);height:auto;overflow:visible !important;}' +
         '.preloader-piece{opacity:0;}' +
